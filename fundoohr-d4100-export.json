@@ -1,0 +1,4438 @@
+{
+  "employee" : {
+    "40001EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551001",
+        "bankName" : "SBH",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "58.04",
+        "degree" : "BE",
+        "diploma" : "No",
+        "discipline" : "Electronics Engg.",
+        "finalYearPercentage" : "64.01",
+        "training" : "Embedded System Programming",
+        "trainingInstitute" : "Vector, Hyderabad",
+        "trainingPeriod" : "6 Months",
+        "yearOfPassing" : "2014"
+      },
+      "hrData" : {
+        "blStartDate" : "09/03/17",
+        "compContractInitiated" : "28/03/17",
+        "compContractSigned" : "29/03/17",
+        "company" : "-",
+        "companyJoinDate" : "23/03/17",
+        "companyLeaveDate" : "13/03/17",
+        "contractSignDate" : "16/06/17",
+        "employeeStatus" : "Fellowshi",
+        "enggContractInitiated" : "22/03/17",
+        "enggContractSigned" : "13/03/17",
+        "fellowshipPeriod" : "4 Months",
+        "hiringCity" : "Mumbaih",
+        "initiateTransfer" : "16/06/17"
+      },
+      "personal" : {
+        "annualSalary" : "5 lacs",
+        "dateOfBirth" : "08/03/17",
+        "emailId" : "amit.singh@gmail.com",
+        "employeeName" : "Amit R Singh",
+        "fatherMobile" : "7896542136",
+        "fatherName" : "Rama Singh",
+        "mobile" : "4521789663",
+        "mumbaiAddress" : "Plot no57,sector 12,vashi, Pin: 400703",
+        "occupation" : "Self Employeed",
+        "permenantAddress" : "S/O Venkateshappa P.R, C/O Suryanarayana Rao B.P, #30/1 Hort Park Road, S.S Puram 15 th Cross,TUMKUR-572102"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40002EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "00",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "200000000000",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "khambeshwetali@ymail.com",
+        "employeeName" : "Shwetali",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000022",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40003EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "07/03/17",
+        "compContractInitiated" : "20/03/17",
+        "compContractSigned" : "23/03/17",
+        "company" : "-",
+        "companyJoinDate" : "14/03/17",
+        "companyLeaveDate" : "21/03/17",
+        "contractSignDate" : "15/03/17",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "29/03/17",
+        "enggContractSigned" : "15/03/17",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20/09/93",
+        "emailId" : "me.bhushan4u@gmail.com",
+        "employeeName" : "Bhushan",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40004EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "10/03/17",
+        "compContractInitiated" : "No",
+        "compContractSigned" : "24/03/17",
+        "company" : "-",
+        "companyJoinDate" : "20/03/17",
+        "companyLeaveDate" : "22/03/17",
+        "contractSignDate" : "No",
+        "employeeStatus" : "Senior Product Developer",
+        "enggContractInitiated" : "yes",
+        "enggContractSigned" : "28/03/17",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "No"
+      },
+      "personal" : {
+        "annualSalary" : "$4.5 billion",
+        "dateOfBirth" : "20/07/1994",
+        "emailId" : "noorihamid1994@gmail.com",
+        "employeeName" : "Hamid",
+        "fatherMobile" : "9004001537",
+        "fatherName" : "Abdul Qadir",
+        "mobile" : "9821671797",
+        "mumbaiAddress" : "Ask Me",
+        "occupation" : "Developer",
+        "permenantAddress" : "Same"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40005EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "shilpareddy.2793@gmail.com",
+        "employeeName" : "Shilpa Reddy",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40006EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "sgpriyanka18@gmail.com",
+        "employeeName" : "Priyanka",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40007EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "swatidindurle@gmail.com",
+        "employeeName" : "Swati S.D.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40008EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "6.87",
+        "degree" : "BTech",
+        "diploma" : "N",
+        "discipline" : "Computer Science",
+        "finalYearPercentage" : "6.87",
+        "training" : "Java, SQL, J2EE",
+        "trainingInstitute" : "Jspider, Banglore",
+        "trainingPeriod" : "6 Months",
+        "yearOfPassing" : "2014"
+      },
+      "hrData" : {
+        "blStartDate" : "1475280000",
+        "compContractInitiated" : "No",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1485907200",
+        "companyLeaveDate" : "1485907200",
+        "contractSignDate" : "No",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "yes",
+        "enggContractSigned" : "yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Bangalore",
+        "initiateTransfer" : "No"
+      },
+      "personal" : {
+        "annualSalary" : "3.5",
+        "dateOfBirth" : "15/03/02",
+        "emailId" : "durga598@gmail.com",
+        "employeeName" : "Durga Madhab Mishra",
+        "fatherMobile" : "9437723050",
+        "fatherName" : "Gangadhar Mishra",
+        "mobile" : "9778447210",
+        "mumbaiAddress" : "Plot no57,sector 12,vashi, Pin: 400703",
+        "occupation" : "Teacher",
+        "permanentAddress" : "Adava, Dist : Gajapati, Odisha , PIN:761217",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40009EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "yndivakar@gmail.com",
+        "employeeName" : "Divakar Y.N.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40010EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "prsharma0403@gmail.com",
+        "employeeName" : "Prashant Praveen",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40011EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1st Oct 2016",
+        "compContractInitiated" : "--",
+        "compContractSigned" : "--",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1st Feb 2017",
+        "companyLeaveDate" : "----",
+        "contractSignDate" : "---",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "---",
+        "enggContractSigned" : "--",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Banglore",
+        "initiateTransfer" : "---"
+      },
+      "personal" : {
+        "annualSalary" : "5L",
+        "dateOfBirth" : "24 apr 1993",
+        "emailId" : "nirajbhatpujari@gmail.com",
+        "employeeName" : "Niraj Bhat",
+        "fatherMobile" : "9448830110",
+        "fatherName" : "Yogesh Bhat",
+        "mobile" : "9482466662",
+        "mumbaiAddress" : "Mumbai",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Gulabarga"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40012EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "naveennpv.navi@gmail.com",
+        "employeeName" : "Naveen P.V.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40013EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "02/11/90",
+        "emailId" : "jyothishkm88@gmail.com",
+        "employeeName" : "Jyotish K.M.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40014EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "65.6",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "71",
+        "training" : "java, J2EE",
+        "trainingInstitute" : "Jspider, Banglore",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2015"
+      },
+      "hrData" : {
+        "blStartDate" : "1st Oct' 2016",
+        "compContractInitiated" : "--",
+        "compContractSigned" : "--",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1st Feb 2017",
+        "companyLeaveDate" : "--",
+        "contractSignDate" : "--",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "--",
+        "enggContractSigned" : "-",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Banglore",
+        "initiateTransfer" : "--"
+      },
+      "personal" : {
+        "annualSalary" : "NA",
+        "dateOfBirth" : "24/12/93",
+        "emailId" : "bhavana4339@gmail.com",
+        "employeeName" : "Bhavana B.K.",
+        "fatherMobile" : "9448887608",
+        "fatherName" : "B B Kushalappa",
+        "mobile" : "8197808156",
+        "mumbaiAddress" : "ashok pg sevice vashi",
+        "occupation" : "TM(BSNL)",
+        "permenantAddress" : "laxmi kripa, vamanjoor, mangalore"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "30th Jan 2017",
+        "bridgelabzStartDate" : "1st Oct' 2016",
+        "currentWeek" : "16 Week",
+        "numberOfWeeksLeft" : "0",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Angular JS",
+        "week1" : "--"
+      }
+    },
+    "40015EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "praveenmt66@gmail.com",
+        "employeeName" : "Praveen T.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40016EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBH",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "BE",
+        "diploma" : "No",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "4 Months",
+        "hiringCity" : "Bangalore",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "15L",
+        "dateOfBirth" : "20 Sep 1999",
+        "emailId" : "nikita.hn@gmail.com",
+        "employeeName" : "Nikita H.N",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK gangadhar",
+        "mobile" : "9876000043",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "2 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40017EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBIiii",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "18/03/17",
+        "compContractInitiated" : "21/03/17",
+        "compContractSigned" : "16/03/17",
+        "company" : "-",
+        "companyJoinDate" : "22/03/17",
+        "companyLeaveDate" : "05/03/17",
+        "contractSignDate" : "02/03/17",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "08/03/17",
+        "enggContractSigned" : "23/03/17",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbaii ",
+        "initiateTransfer" : "21/03/17"
+      },
+      "personal" : {
+        "annualSalary" : "--",
+        "dateOfBirth" : "16/03/17",
+        "emailId" : "abhi.ganguly01@gmail.com",
+        "employeeName" : "Abhishek Ganguly",
+        "fatherMobile" : "7077760475",
+        "fatherName" : "KK ganguli",
+        "mobile" : "7064755338",
+        "mumbaiAddress" : "Sector-12 Vashi, Navi Mumbai",
+        "occupation" : "Private Service",
+        "permenantAddress" : "---"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Androids",
+        "week1" : "7 week"
+      }
+    },
+    "40018EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "DHAREPPAHM@GMAIL.COM",
+        "employeeName" : "Dhareppa Metri",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40019EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "HDFC Bank",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "No",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "--",
+        "degree" : "B.E.",
+        "diploma" : "No",
+        "discipline" : "E&EE",
+        "finalYearPercentage" : "--",
+        "training" : "NA",
+        "trainingInstitute" : "--",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2015"
+      },
+      "hrData" : {
+        "blStartDate" : "1st 'Oct 2016",
+        "compContractInitiated" : "--",
+        "compContractSigned" : "--",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1st Feb' 2017",
+        "companyLeaveDate" : "--",
+        "contractSignDate" : "--",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "--",
+        "enggContractSigned" : "--",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "--"
+      },
+      "personal" : {
+        "annualSalary" : "$100000",
+        "dateOfBirth" : "28 March 1993",
+        "emailId" : "vikashprasad2810@gmail.com",
+        "employeeName" : "Vikash Kumar Prasad",
+        "fatherMobile" : "7250654529",
+        "fatherName" : "Binod Prasad",
+        "mobile" : "9738782099",
+        "mumbaiAddress" : "Sector-12 Vashi Navi Mumbai",
+        "occupation" : "---",
+        "permenantAddress" : "Ranchi(Jharkhand)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "16 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Angular JS",
+        "week1" : "7 week"
+      }
+    },
+    "40020EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "01/03/94",
+        "emailId" : "kalitha.gowda@gmail.com",
+        "employeeName" : "Kalitha H.N.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40021EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "09/03/91",
+        "emailId" : "khansuhl@gmail.com",
+        "employeeName" : "Khan Suhail Ahmad",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40022EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "65",
+        "degree" : "B.E",
+        "diploma" : "Yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "65",
+        "training" : "NA",
+        "trainingInstitute" : "profound",
+        "trainingPeriod" : "3 months",
+        "yearOfPassing" : "2015"
+      },
+      "hrData" : {
+        "blStartDate" : "1st Oct 2016",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1st Feb 2017",
+        "companyLeaveDate" : "--",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "2 Lac",
+        "dateOfBirth" : "16th May 1993",
+        "emailId" : "sharadvanjari5@gmail.com",
+        "employeeName" : "Sharad Vanjari",
+        "fatherMobile" : "9689388995",
+        "fatherName" : "Rayaba",
+        "mobile" : "7977295967",
+        "mumbaiAddress" : "Flat no 02 ambika apartment,kalyan East,mumbai",
+        "occupation" : "Farmer",
+        "permenantAddress" : "Flat no 02 ambika apartment,kalyan East,mumbai"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40023EI" : {
+      "bank" : {
+        "accountNumber" : "xxxxxxxxxxx420",
+        "bankName" : "HDFC Bank",
+        "ifscCode" : "HDFC00542",
+        "pan" : "SIR007420",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "58.01",
+        "degree" : "B.E",
+        "diploma" : "No",
+        "discipline" : "Electronics",
+        "finalYearPercentage" : "64.04",
+        "training" : "Embedded System",
+        "trainingInstitute" : "Vector India",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2014"
+      },
+      "hrData" : {
+        "blStartDate" : "15/03/17",
+        "compContractInitiated" : "20/03/17",
+        "compContractSigned" : "No",
+        "company" : "-",
+        "companyJoinDate" : "04/03/17",
+        "companyLeaveDate" : "15/03/17",
+        "contractSignDate" : "02/12/16",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "12/03/17",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "21/10/16"
+      },
+      "personal" : {
+        "annualSalary" : "22Lacs",
+        "dateOfBirth" : "08/03/17",
+        "emailId" : "xyz@gmail.com",
+        "employeeName" : "Amit R Singh",
+        "fatherMobile" : "9820181889",
+        "fatherName" : "Ramashankar Singh",
+        "mobile" : "9594368083",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Senior Software Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "Don't Know",
+        "bridgelabzStartDate" : "22th Oct 2016",
+        "currentWeek" : "12week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "AngularJS",
+        "week1" : "7 week"
+      }
+    },
+    "40024EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "77",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "20/03/17",
+        "compContractInitiated" : "11/12/16",
+        "compContractSigned" : "13/12/16",
+        "company" : "-",
+        "companyJoinDate" : "09/02/17",
+        "companyLeaveDate" : "09/12/16",
+        "contractSignDate" : "..",
+        "employeeStatus" : "yes",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "21/12/16",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20/09/93",
+        "emailId" : "dhiresh.bhoir.8972111@gmail.com",
+        "employeeName" : "Dhiresh Bhoir",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40025EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "maneshraddha1006@gmail.com",
+        "employeeName" : "Shraddha Mane",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40026EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "Vivek.hv20@gmail.com",
+        "employeeName" : "Vivek H.",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40027EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "tanviraul23@gmail.com",
+        "employeeName" : "Tanvi Raul",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40028EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "15/07/94",
+        "emailId" : "rahulmandalkar431@gmail.com",
+        "employeeName" : "Mandalkar Rahul",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40029EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "09/12/16",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "25/10/16",
+        "company" : "-",
+        "companyJoinDate" : "20/10/16",
+        "companyLeaveDate" : "25/10/16",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "13/10/16",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "No"
+      },
+      "personal" : {
+        "annualSalary" : "10L",
+        "dateOfBirth" : "02/06/92",
+        "emailId" : "gokulsonawane9@gmail.com",
+        "employeeName" : "Sonawane Gokul",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "Ramanath Sonawane ",
+        "mobile" : "9028152644",
+        "mumbaiAddress" : "room no-25, shivkrupa building,katemanivli naka,kolasevadi,kalyan East",
+        "occupation" : "Android developer ",
+        "permenantAddress" : "Andarsul,tal-Yeola,Nashik"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40030EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "patil.vaibhav2812@gmail.com",
+        "employeeName" : "Vaibhav Patil",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40031EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "65.34%",
+        "degree" : "B.E.",
+        "diploma" : "NA",
+        "discipline" : "E&TC",
+        "finalYearPercentage" : "79",
+        "training" : "NA",
+        "trainingInstitute" : "QSpider,Pune",
+        "trainingPeriod" : "4 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "5th Dec' 2016",
+        "compContractInitiated" : "--",
+        "compContractSigned" : "--",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "--",
+        "companyLeaveDate" : "--",
+        "contractSignDate" : "--",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "--",
+        "enggContractSigned" : "--",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Pune",
+        "initiateTransfer" : "--"
+      },
+      "personal" : {
+        "annualSalary" : "---",
+        "dateOfBirth" : "14/03/84",
+        "emailId" : "krushnabhamare@gmail.com",
+        "employeeName" : "Krushna Bhamare",
+        "fatherMobile" : "9552693468",
+        "fatherName" : "kautik",
+        "mobile" : "7021404986",
+        "mumbaiAddress" : "thane,east.",
+        "occupation" : "farmer",
+        "permenantAddress" : "a/p:-mungase ,tal:-malegaon .dist:-nashik"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "5th March 2017",
+        "bridgelabzStartDate" : "5th Dec'2016",
+        "currentWeek" : "7 week",
+        "numberOfWeeksLeft" : "9 week ",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Angular JS",
+        "week1" : "--"
+      }
+    },
+    "40032EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "21/03/17",
+        "compContractInitiated" : "22/09/16",
+        "compContractSigned" : "14/09/16",
+        "company" : "-",
+        "companyJoinDate" : "03/02/17",
+        "companyLeaveDate" : "06/01/17",
+        "contractSignDate" : "..",
+        "employeeStatus" : "yes",
+        "enggContractInitiated" : "16/09/16",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "19/09/16"
+      },
+      "personal" : {
+        "annualSalary" : "60L",
+        "dateOfBirth" : "26/05/89",
+        "emailId" : "anujsachan@gmail.com",
+        "employeeName" : "Anuj Sachan",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "Rajesh Kumar sachan",
+        "mobile" : "9158327177",
+        "mumbaiAddress" : "flatno-401 janelia F ,palawa ",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40033EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "deepak.deepu2020@gmail.com",
+        "employeeName" : "Satyendra Singh",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40034EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "71",
+        "degree" : "Btech",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "76",
+        "training" : "NA",
+        "trainingInstitute" : "NA",
+        "trainingPeriod" : "6 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "Yes",
+        "compContractSigned" : "No",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "1477308028",
+        "companyLeaveDate" : "1477308028",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "Yes",
+        "enggContractSigned" : "Yes",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "Yes"
+      },
+      "personal" : {
+        "annualSalary" : "20L",
+        "dateOfBirth" : "20 Sep 1993",
+        "emailId" : "shankar.uma35@gmail.com",
+        "employeeName" : "Umashankar Chaurasiya",
+        "fatherMobile" : "9768525131",
+        "fatherName" : "KK ganguli",
+        "mobile" : "9876000021",
+        "mumbaiAddress" : "Flat No.201,Raheja Complex , Andheri (W)",
+        "occupation" : "Engineer",
+        "permenantAddress" : "Flat No.201, Raheja Complex , Andheri (W)"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "2nd April 2017",
+        "bridgelabzStartDate" : "2nd Jan 2017",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "19 week",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Android",
+        "week1" : "7 week"
+      }
+    },
+    "40035EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "55.44%",
+        "degree" : "B.E.",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "64%",
+        "training" : "Java",
+        "trainingInstitute" : "Profound Institute Pune",
+        "trainingPeriod" : "3 month",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "28th Dec 2016",
+        "compContractInitiated" : "----",
+        "compContractSigned" : "----",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "----",
+        "companyLeaveDate" : "---",
+        "contractSignDate" : "..",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "---",
+        "enggContractSigned" : "----",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "---"
+      },
+      "personal" : {
+        "annualSalary" : "3 Lac",
+        "dateOfBirth" : "23th July 1993",
+        "emailId" : "prashaneng1993@gmail.com",
+        "employeeName" : "Prashant Thorat",
+        "fatherMobile" : "9503846621",
+        "fatherName" : "Sakharam",
+        "mobile" : "8983185545",
+        "mumbaiAddress" : "802,siddharth apartment,titwala,mumbai.",
+        "occupation" : "Clerk",
+        "permenantAddress" : "103,manik nagar,behind navnath nagar near sai baba temple ,dhule Pin-424001"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "----",
+        "bridgelabzStartDate" : "28th Dec 2016",
+        "currentWeek" : "4 week",
+        "numberOfWeeksLeft" : "----",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "Angular js",
+        "week1" : "-----"
+      }
+    },
+    "40036EI" : {
+      "bank" : {
+        "accountNumber" : "06001251551000",
+        "bankName" : "SBI",
+        "ifscCode" : "SBI002121",
+        "pan" : "APZT54551ds",
+        "paySalary" : "Yes",
+        "reason" : "NA"
+      },
+      "educational" : {
+        "aggregateIn" : "62.90%",
+        "degree" : "NA",
+        "diploma" : "yes",
+        "discipline" : "CS",
+        "finalYearPercentage" : "69.25%",
+        "training" : "NA",
+        "trainingInstitute" : "Profound Edutech",
+        "trainingPeriod" : "3 months",
+        "yearOfPassing" : "2016"
+      },
+      "hrData" : {
+        "blStartDate" : "1477308028",
+        "compContractInitiated" : "--",
+        "compContractSigned" : "---",
+        "company" : "BridgeLabz",
+        "companyJoinDate" : "---",
+        "companyLeaveDate" : "---",
+        "contractSignDate" : "--",
+        "employeeStatus" : "Fellowship",
+        "enggContractInitiated" : "--",
+        "enggContractSigned" : "--",
+        "fellowshipPeriod" : "3 Months",
+        "hiringCity" : "Mumbai",
+        "initiateTransfer" : "--"
+      },
+      "personal" : {
+        "annualSalary" : "5000 k",
+        "dateOfBirth" : "22/07/94",
+        "emailId" : "badgujarmohan10@gmail.com",
+        "employeeName" : "Mohan",
+        "fatherMobile" : "9881943523",
+        "fatherName" : "Jijabrao Shankar Badgujar",
+        "mobile" : "9595682995",
+        "mumbaiAddress" : "----",
+        "occupation" : "IOS developer ",
+        "permenantAddress" : "At Post -Fagne(Shivaji Nagar) Tal Dist -Dhule ,Pin-424301"
+      },
+      "tracking" : {
+        "bridgelabzEndDate" : "---",
+        "bridgelabzStartDate" : "---",
+        "currentWeek" : "2 week",
+        "numberOfWeeksLeft" : "--",
+        "numberWeeksLeft" : "7 weeks",
+        "techStack" : "---",
+        "week1" : "Linux, GitHub"
+      }
+    }
+  },
+  "employeeAttendance" : {
+    "40001EI" : {
+      "2016" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day10" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          }
+        }
+      },
+      "2017" : {
+        "February" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "2:0AM",
+            "punchOut" : "7:0AM",
+            "reason" : "-"
+          },
+          "day15" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "14:0PM",
+            "punchOut" : "9:0AM",
+            "reason" : "not sure "
+          },
+          "day24" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "9:0AM",
+            "punchOut" : "6:0AM",
+            "reason" : "-"
+          },
+          "day28" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "14:0PM",
+            "punchOut" : "9:0AM",
+            "reason" : "not feeling good "
+          }
+        },
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "I don't care"
+          },
+          "day11" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "9:0AM",
+            "punchOut" : "6:0AM",
+            "reason" : "leave"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:12 AM",
+            "punchOut" : "02:22 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "9:0AM",
+            "punchOut" : "18:0PM",
+            "reason" : "leave "
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "My Wish"
+          },
+          "day22" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Co-Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          },
+          "day25" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          },
+          "day26" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Republic Day"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : true,
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day4" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "let it be"
+          },
+          "day5" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "For all enjoy"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "01:23 AM",
+            "punchOut" : "12:23 AM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 AM",
+            "punchOut" : "07:07 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "09:09 AM",
+            "punchOut" : "07:08 PM",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "9:0AM",
+            "punchOut" : "6:0AM",
+            "reason" : "leave"
+          }
+        },
+        "March" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "14:0PM",
+            "punchOut" : "20:0PM",
+            "reason" : "-"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30AM",
+            "punchOut" : "19:45PM",
+            "reason" : "-"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "08:30 AM",
+            "punchOut" : "07:30 AM",
+            "reason" : ""
+          },
+          "day3" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "",
+            "punchOut" : "",
+            "reason" : "Na"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "08:30 AM",
+            "punchOut" : "07:30 AM",
+            "reason" : ""
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "08:30 AM",
+            "punchOut" : "07:30 AM",
+            "reason" : ""
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "20:0PM",
+            "punchOut" : "3:0AM",
+            "reason" : "-"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:0AM",
+            "punchOut" : "19:0PM",
+            "reason" : "-"
+          }
+        }
+      }
+    },
+    "40003EI" : {
+      "1985" : {
+        "June" : {
+          "day22" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : true,
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "I dont Care"
+          }
+        }
+      },
+      "2017" : {
+        "February" : {
+          "day27" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : true,
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "I dont Care"
+          },
+          "day28" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : true,
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "I dont care "
+          }
+        },
+        "January" : {
+          "day15" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : true,
+            "punchIn" : "11:11 AM",
+            "punchOut" : "11:11 PM",
+            "reason" : "I dont Care"
+          }
+        },
+        "March" : {
+          "day6" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : true,
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "I dont care "
+          },
+          "day7" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "  ghsjshs"
+          }
+        }
+      }
+    },
+    "40004EI" : {
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "I dont Care"
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "The Hell..."
+          },
+          "day3" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Stop It."
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 AM",
+            "punchOut" : "011:11 PM",
+            "reason" : "NA"
+          }
+        }
+      }
+    },
+    "40005EI" : {
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "qqq"
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "12345"
+          },
+          "day3" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Lol"
+          },
+          "day4" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Woooohoo"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "08:08 AM",
+            "punchOut" : "07:07 PM",
+            "reason" : "NA"
+          }
+        }
+      }
+    },
+    "40008EI" : {
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 AM",
+            "punchOut" : "02:22 PM",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "00:00 AM",
+            "punchOut" : "00:00 AM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 AM",
+            "punchOut" : "11:11 AM",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Leave Leave"
+          },
+          "day13" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "qweqwwe"
+          },
+          "day14" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "112212"
+          },
+          "day16" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "09:00 AM",
+            "punchOut" : "07:30 PM",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "qqqq"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 PM",
+            "punchOut" : "02:02 AM",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 AM",
+            "punchOut" : "11:11 PM",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "11:11 AM",
+            "punchOut" : "11:11 PM",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "12:12 PM",
+            "punchOut" : "12:12 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "07:03 AM",
+            "punchOut" : "09:09 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "12:00 PM",
+            "punchOut" : "11:11 AM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "10:10 PM",
+            "punchOut" : "10:10 PM",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "12:12 PM",
+            "punchOut" : "12:12 PM",
+            "reason" : "NA"
+          }
+        }
+      }
+    },
+    "40009EI" : {
+      "2016" : {
+        "December" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Fever"
+          },
+          "day16" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Fever"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day25" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day26" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day28" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day30" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day31" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 Pm",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          }
+        }
+      },
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day16" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "9.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Out of town"
+          },
+          "day25" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Out of town"
+          },
+          "day26" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "9.30 PM",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          }
+        }
+      }
+    },
+    "40014EI" : {
+      "2017" : {
+        "February" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          }
+        }
+      }
+    },
+    "40016EI" : {
+      "2016" : {
+        "December" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day16" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Out of station"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day25" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day26" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day28" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day30" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day31" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          }
+        }
+      },
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Not well"
+          },
+          "day11" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Function"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day16" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day23" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Not well"
+          },
+          "day24" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day25" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Not well"
+          },
+          "day26" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day28" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day30" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day31" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          }
+        }
+      }
+    },
+    "40017EI" : {
+      "2016" : {
+        "December" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day25" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          }
+        }
+      },
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day16" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Out of town"
+          },
+          "day25" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day26" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          }
+        },
+        "March" : {
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "08:30 AM",
+            "punchOut" : "07:30 AM",
+            "reason" : ""
+          },
+          "day7" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "not feeling well "
+          }
+        }
+      }
+    },
+    "40020EI" : {
+      "2016" : {
+        "December" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day16" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Out of station"
+          },
+          "day17" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Out of station"
+          },
+          "day18" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day25" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day26" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day28" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day30" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day31" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          }
+        }
+      },
+      "2017" : {
+        "January" : {
+          "day1" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day11" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day12" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day14" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day15" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day16" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day18" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day19" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day22" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day24" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "Fever"
+          },
+          "day25" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day26" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day29" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day5" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8.30 AM",
+            "punchOut" : "7.30 PM",
+            "reason" : "NA"
+          },
+          "day8" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          },
+          "day9" : {
+            "attendanceStatus" : "Unmarked",
+            "markedStatus" : "false",
+            "punchIn" : "NA",
+            "punchOut" : "NA",
+            "reason" : "NA"
+          }
+        }
+      }
+    },
+    "40023EI" : {
+      "2017" : {
+        "January" : {
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "1:0AM",
+            "punchOut" : "20:0PM",
+            "reason" : "not feeling well "
+          },
+          "day26" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "not feeling well "
+          }
+        }
+      }
+    },
+    "40024EI" : {
+      "2017" : {
+        "February" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          }
+        }
+      }
+    },
+    "40025EI" : {
+      "2017" : {
+        "February" : {
+          "day1" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          },
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          }
+        }
+      }
+    },
+    "40029EI" : {
+      "2017" : {
+        "February" : {
+          "day1" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day10" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day11" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day13" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day14" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-Not feeling good"
+          },
+          "day15" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day16" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day18" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day2" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day20" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day21" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day22" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day23" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day24" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day25" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-Last Sat"
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day28" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day3" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day6" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day7" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day8" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          },
+          "day9" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "8:30 AM",
+            "punchOut" : "7:30 PM",
+            "reason" : "-"
+          }
+        }
+      }
+    },
+    "40032EI" : {
+      "2017" : {
+        "February" : {
+          "day15" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "2:0AM",
+            "punchOut" : "9:0AM",
+            "reason" : "not feeling well "
+          },
+          "day17" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "1:0AM",
+            "punchOut" : "20:0PM",
+            "reason" : "not feeling well "
+          },
+          "day18" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "1:0AM",
+            "punchOut" : "20:0PM",
+            "reason" : "not feeling well "
+          },
+          "day20" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "not good "
+          },
+          "day23" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "not feeling well "
+          },
+          "day27" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "2:0AM",
+            "punchOut" : "9:0AM",
+            "reason" : "gb"
+          }
+        },
+        "January" : {
+          "day17" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "1:30AM",
+            "punchOut" : "19:20PM",
+            "reason" : "not good "
+          },
+          "day21" : {
+            "attendanceStatus" : "CompLeave",
+            "markedStatus" : "true",
+            "punchIn" : "1:30AM",
+            "punchOut" : "19:20PM",
+            "reason" : "not feeling well "
+          },
+          "day31" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "1:30AM",
+            "punchOut" : "19:20PM",
+            "reason" : "not well "
+          },
+          "day4" : {
+            "attendanceStatus" : "Present",
+            "markedStatus" : "true",
+            "punchIn" : "1:30AM",
+            "punchOut" : "19:20PM",
+            "reason" : "-"
+          }
+        }
+      }
+    },
+    "40034EI" : {
+      "2017" : {
+        "February" : {
+          "day2" : {
+            "attendanceStatus" : "Leave",
+            "markedStatus" : "true",
+            "punchIn" : "-",
+            "punchOut" : "-",
+            "reason" : "Not feeling good"
+          }
+        }
+      }
+    }
+  }
+}

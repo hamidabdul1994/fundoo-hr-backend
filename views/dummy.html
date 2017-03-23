@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1><u><center>Attendance Report</center><u></h1>
+    <br/>
+    <h2><u><center>Company Name : {{companyName}}</center></u></h2>
+    <br/>
+    {{#engineerList}}
+    <div>
+      <span><strong>Engineer Name:</strong> {{engineerName}}</span><br>
+      <span><strong>Engineer Id:</strong> {{engineerId}}</span><br>
+      <table border="1" style="margin-top:20px">
+        <tr>
+          <th>
+            Date
+          </th>
+          <th>
+            Reason
+          </th>
+        </tr>
+        {{#attendanceData}}
+        <tr>
+          <td>
+            {{date}}
+          </td>
+          <td>
+            {{reason}}
+          </td>
+        </tr>
+        {{/attendanceData}}
+      </table>
+    </div>
+    {{/engineerList}}
+  </body>
+</html>
