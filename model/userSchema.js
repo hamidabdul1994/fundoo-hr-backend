@@ -37,7 +37,7 @@ var minlength = [3, 'The value of path `{PATH}` (`{VALUE}`) is shorter than the 
 
 /**
  * @schema  UserSchema
- * @description User details 
+ * @description User details
  */
 var UserSchema = new Base.BaseSchema({
     username: {
@@ -145,7 +145,7 @@ UserSchema.virtual('fullName').set(function (name) {
 
 /**
  * Find `User` by its email
- * 
+ *
  * @param {String} email
  * @return {Error} err
  * @return {User} user
@@ -156,12 +156,12 @@ UserSchema.methods.findByEmail = function (email, cb) {
             emailAddress: email
         })
         .exec(cb);
-}
+};
 
 
 /**
  * Find `User` by its id
- * 
+ *
  * @param {String} id
  * @return {Error} err
  * @return {User} user
@@ -174,7 +174,7 @@ UserSchema.methods.getUserById = function (id, callback) {
 
 /**
  * Find `User` by its username
- * 
+ *
  * @param {String} username
  * @return {Error} err
  * @return {User} user
@@ -187,10 +187,27 @@ UserSchema.methods.getUserByUsername = function (username, callback) {
     User.findOne(query, callback);
 };
 
+/**
+ * Find `User` by its username and Password
+ *
+ * @param {String} username
+ * @param {String} password
+ * @return {Error} err
+ * @return {User} user
+ * @api public
+ */
+UserSchema.statics.getUserByUsernameAndPassword = function (username,password, callback) {
+    var query = {
+        username: username,
+        password:password
+    };
+    User.findOne(query, callback);
+};
+
 
 /**
  * Compare User Password `User` by passing candidatePassword
- * 
+ *
  * @param {String} candidatePassword
  * @return {Error} err
  * @return Void
@@ -205,7 +222,7 @@ UserSchema.methods.comparePassword = function (candidatePassword, hash, callback
 
 /**
  * createUser `User` by newUser Object
- * 
+ *
  * @param {Object} newUser
  * @return {Error} err
  * @return Void
