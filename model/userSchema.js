@@ -11,6 +11,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     bcrypt = require('bcryptjs'),
+    passportLocalMongoose = require('passport-local-mongoose'),
     Base = require('./base'); // Include the base schema
 
 var ObjectId = Schema.Types.ObjectId;
@@ -40,30 +41,11 @@ var minlength = [3, 'The value of path `{PATH}` (`{VALUE}`) is shorter than the 
  * @description User details
  */
 var UserSchema = new Base.BaseSchema({
-    username: {
-        type: String,
-        required: false,
-        trim: true,
-        lowercase: true,
-        unique: true,
-        required: [true, '{PATH} is required.'], //match: /^[\w][\w\-\.]*[\w]$/i,
-        // match: [
-        //     new RegExp('^[a-z0-9_.-]+$', 'i'),
-        //     '{PATH} \'{VALUE}\' is not valid. Use only letters, numbers, underscore or dot.'
-        // ],
-        minlength: minlength,
-        maxlength: 60
-    },
-    password: {
-        type: String,
-        required: false, // Only required if local
-        trim: true,
-        match: new RegExp('^.{8,64}$')
-    },
     engineerID: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        unique: ['A user with same Engineer ID {VALUE} already exists']
     },
     firstName: {
         type: String,
@@ -77,15 +59,16 @@ var UserSchema = new Base.BaseSchema({
         type: String,
         trim: true,
         lowercase: true,
-        unique: true,
+        unique: ['A user with same Email Address {VALUE} already exists'],
         required: 'Email address is required',
         //validate: [validate.email, 'invalid email address']
     },
     engineerType: {
         type: String,
+        required: ['Engineer Type is required.'],
         enum: {
             values: engineerTypes,
-            message: 'Please select an Engineer Type. Engineer type cannot be blank.'
+            message: 'Invalid Engineer Type. Please selecet a valid Engineer Type.'
         }
     },
     gender: {
@@ -113,6 +96,10 @@ var UserSchema = new Base.BaseSchema({
     },
     lastIPAddress: String
 });
+
+UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(require('mongoose-beautiful-unique-validation'));
+var UserModel = Base.BaseModel.discriminator('User', UserSchema);
 
 /**
  * Get `fullName` from `firstName` and `lastName`
@@ -156,7 +143,7 @@ UserSchema.methods.findByEmail = function (email, cb) {
             emailAddress: email
         })
         .exec(cb);
-};
+}
 
 
 /**
@@ -233,7 +220,7 @@ UserSchema.methods.createUser = function (newUser, callback) {
         bcrypt.hash(newUser.password, salt, function (err, hash) {
             newUser.password = hash;
             newUser.save(function (error, data, affected) {
-                console.error(error);
+                //console.error(error);
                 if (error && error.code !== 11000) {
                     if (error.name == 'ValidationError') {
                         for (var field in error.errors) {
@@ -245,11 +232,13 @@ UserSchema.methods.createUser = function (newUser, callback) {
                 }
                 //duplicate key
                 if (error && error.code === 11000) {
-                    return callback('User already registered', null);
+                    //throw new Error('User already registered');
+
+                    //callback('User already registered', null);
                 } else {
-                    return callback(null, data);
+                    callback(null, data);
+                    console.log('Inserted new user');
                 }
-                console.log('Inserted new user');
             });
         });
     });
@@ -268,6 +257,6 @@ UserSchema.pre('save', function (next) {
  * Expose `User` Model
  */
 module.exports = {
-    UserModel: Base.BaseModel.discriminator('User', UserSchema), //mongoose.model('User', UserSchema);
+    User: UserModel, //mongoose.model('User', UserSchema);
     UserSchema: UserSchema
 };

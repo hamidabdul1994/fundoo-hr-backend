@@ -22,8 +22,8 @@ var UserTrackingSchema = new Base.BaseSchema({
     user: {
         type: ObjectId,
         ref: 'User',
-		unique: true,
-		required: true
+        unique: true,
+        required: true
     },
     techStack: {
         type: String,
