@@ -3,6 +3,8 @@
 var mongoose = require('mongoose'),
   dbURI = 'mongodb://localhost/fundoohr';
 
+mongoose.Promise = global.Promise; // Fix for error : Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+
 // mongoose.connect('127.0.0.1','test');
 mongoose.connect(dbURI, function (err) {
   if (err) console.log(err);

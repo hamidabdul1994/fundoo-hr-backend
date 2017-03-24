@@ -13,12 +13,12 @@ router.post("/", function (request, response) {
         request.check(config.validationSchema.loginValidation);
         result = config.defaultResult;
     } catch (e) {
-        result = {};
+        var result = {};
         result.status = false;
         result.message = "Something bad happened. Please contact system Administrator.";
         console.error(e);
         response.status(401).json(result);
-    }
+    };
     request.getValidationResult().then(function (isValid) {
         try {
             if (!isValid.isEmpty()) {
