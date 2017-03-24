@@ -52,7 +52,7 @@ console.log = function() {
 var app = express();
 var subpath = express();
 app.set('database', config.database);
-app.set('port', process.env.NODE_PORT || 3333);
+app.set('port', process.env.NODE_PORT || 3033);
 app.set('host', process.env.NODE_IP || 'localhost');
 
 app.use(cors());

@@ -3,10 +3,11 @@ var express = require('express'),
     firebase = require("../config/database/firebase"),
     commonMethod = require("../common/commonMethod"),
     config = require('../config/static/'),
-    User = require('../model/userSchema').User,
+    User = require('../model/userSchema').UserSchema,
     router = express.Router();
 
 router.post("/", function (request, response) {
+  console.log(User);
     var result, errors;
     try {
         request.filter();
@@ -28,7 +29,7 @@ router.post("/", function (request, response) {
             }
             var email = request.body.emailAddress,
                 password = request.body.password;
-                User.getUserByUsernameAndPassword({username:email,password:password},function (err,data) {
+                User.getUserByUsernameAndPassword({username:email},function (err,data) {
                   console.log(data);
                 });
             // firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {

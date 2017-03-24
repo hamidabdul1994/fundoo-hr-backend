@@ -183,12 +183,8 @@ UserSchema.methods.getUserByUsername = function (username, callback) {
  * @return {User} user
  * @api public
  */
-UserSchema.statics.getUserByUsernameAndPassword = function (username,password, callback) {
-    var query = {
-        username: username,
-        password:password
-    };
-    User.findOne(query, callback);
+UserSchema.methods.getUserByUsernameAndPassword = function (query, callback) {
+    this.findOne(query, callback);
 };
 
 

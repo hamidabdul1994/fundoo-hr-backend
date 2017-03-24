@@ -11,11 +11,15 @@ app.use("/readEmployeeDayAttendance", require("./readEmployeeDayAttendance"));
 app.use("/createEmployeeDayAttendance", require("./createEmployeeDayAttendance"));
 app.use("/searchEmployeeByName", require("./searchEmployeeByName"));
 
+app.use("/readEmployee", require("./readEmployee"));
+/*
 app.use("/readEmployeeHRData", require("./readEmployeeHRData"));
 app.use("/readEmployeePersonalData", require("./readEmployeePersonalData"));
 app.use("/readEmployeeProfileData", require("./readEmployeeProfileData"));
 app.use("/readEmployeeBankData", require("./readEmployeeBankData"));
 app.use("/readEmployeeTrackingData", require("./readEmployeeTrackingData"));
+*/
+app.use("/updateEmployee", require("./updateEmployee"));
 
 app.use("/updateEmployeeHRData", require("./updateEmployeeHRData"));
 app.use("/updateEmployeePersonalData", require("./updateEmployeePersonalData"));

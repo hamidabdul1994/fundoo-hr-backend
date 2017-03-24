@@ -42,6 +42,7 @@ router.post("/", function(request, response, next) {
                 try {
                     if (error) {
                         if (error.name == 'ValidationError') {
+                          console.log(error);
                             for (var field in error.errors) {
                                 if(error.errors[field].kind == 'enum'){
                                     if(typeof error.errors[field].message !== undefined)
