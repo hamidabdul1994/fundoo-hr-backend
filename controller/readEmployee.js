@@ -2,16 +2,54 @@ var Express = require('express');
 var router = Express.Router();
 var commonMethod = require("../common/commonMethod");
 var deriveDataEvent = require("../common/events");
+var config = require('../config/static');
 
-router.get("/:requiredData",function(request,response){
-  try {
-    response.send({"userWant":request.params});
-} catch (e) {
-  if(e===400)
-  res.status(400).send("Bad Request Parameter");
-  else
-  res.status(401).send("invalid token or set token Header in");
-}
+router.get("/:requiredData", function(request, response) {
+    var result = {},
+        errors;
+    try {
+        console.log(JSON.stringify(result));
+        result = config.defaultResult; //Setting Default Result as false
+        console.log(JSON.stringify(result));
+        var employeeArea = request.params.requiredData;
+        if (config.employeeArea.indexOf(employeeArea) === -1) {
+            throw "Bad Parameter Conntact to administrator"; //Generating Error While not Finding param in array
+        } else {
+            // if (typeof config.validationSchema.employeeData != undefined) {
+                request.check(config.validationSchema.employeeData);
+                request.getValidationResult().then(function(isValid) {
+                  try {
+                    if (!isValid.isEmpty()) {
+                        errors = request.validationErrors(); // isValid = isValid.useFirstErrorOnly();
+                        throw errors[0].msg;
+                    }
+                    console.log(JSON.stringify(result));
+                    result.status = true;
+                    result.message = "Successfully Generated";
+                    result[employeeArea] = {
+                        "data": "data"
+                    };
+                    var updateData = request.body;
+                    response.send(result);
+                  } catch (e) {
+                    if (!config.checkSystemErrors(e)) {
+                        result.message = e;
+                    }
+                    response.status(401).json(result);
+                  }
+
+            // }
+
+          });
+        }
+    } catch (e) {
+        if (!config.checkSystemErrors(e)) {
+            result.message = e;
+        }
+        console.log(JSON.stringify(result));
+        response.status(401).json(result);
+    }
+
 });
 
-module.exports=router;
+module.exports = router;

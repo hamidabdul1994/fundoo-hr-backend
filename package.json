@@ -11,6 +11,7 @@
     "aws-sdk": "^2.26.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.16.1",
+    "cli-color": "^1.2.0",
     "colors": "^1.1.2",
     "config": "^1.25.1",
     "cookie-session": "^2.0.0-beta.1",
@@ -44,7 +45,8 @@
     "passport-local-mongoose": "^4.0.0",
     "redis": "^2.6.5",
     "stylus": "*",
-    "swagger-node-express": "~2.0"
+    "swagger-node-express": "~2.0",
+    "winston": "^2.3.1"
   },
   "devDependencies": {},
   "scripts": {

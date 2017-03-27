@@ -46,6 +46,35 @@ var validationSchema = {
                 errorMessage: 'Enter a valid email address.'
             }
         }
+    },
+    "hr": {
+        "user": { in: 'body',
+            notEmpty: {
+                errorMessage: 'User field is require & cannot be blank.'
+            }
+        },
+        "hiringCity": { in: 'body',
+            notEmpty: {
+                errorMessage: 'hiringCity field is require & cannot be blank.'
+            }
+        },
+        "fellowshipPeriod": {},
+        "bridgelabzStartDate": {},
+        "companyStartDate": {},
+        "companyEndDate": {},
+        "enggContractInitiated": {},
+        "enggContractSigned": {},
+        "companyContractInitiated": {},
+        "companyContractSigned": {},
+        "contractSignDate": {},
+        "initiateTransfer": {}
+    },
+    "employeeData":{
+      "engineerID": { in: 'query',
+          notEmpty: {
+              errorMessage: 'engineerID field is require & cannot be blank.'
+          }
+      }
     }
 };
 
@@ -62,7 +91,7 @@ var defaultResult = {
 /**
  * @description Checks the system errors & returns true if system/programming errors
  * @param {any} err type object/string
- * @returns Boolean true/false 
+ * @returns Boolean true/false
  */
 var checkSystemErrors = function(err) {
     return err instanceof TypeError ||
@@ -72,8 +101,16 @@ var checkSystemErrors = function(err) {
         err instanceof ReferenceError;
 }
 
+/**
+ * @description Checks The Emplyee Data Field
+ * @param {any} type object/string
+ * @returns Array
+ */
+var employeeArea = ["hr", "personal", "profile", "bank", "track"];
+
 module.exports = {
     validationSchema: validationSchema,
     checkSystemErrors: checkSystemErrors,
-    defaultResult: defaultResult
+    defaultResult: defaultResult,
+    employeeArea: employeeArea
 }
