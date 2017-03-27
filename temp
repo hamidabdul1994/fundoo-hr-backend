@@ -1,9 +1,0 @@
-app.set('superSecret', "hjdasjhdasbdasdbas");
-var token = jwt.sign({"name":"Hamid","age":26}, app.get('superSecret'), {
-          expiresIn: 1400
-        });
-console.log(token);
-jwt.verify(token, app.get('superSecret'), function(err, decoded) {
-  console.log("error",err);
-  console.log("decoded",decoded);
-});

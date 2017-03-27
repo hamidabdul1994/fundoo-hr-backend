@@ -1,137 +1,67 @@
-var winston = require('winston'),
-    dateFormat = require('dateformat'),
-    clc = require('cli-color');
+
+/**
+ * index.js
+ *
+ * Index Configuration setup is required to run your server.
+ *
+ * @author  Dilip <dilip.more@bridgelabz.com>
+ * @license ICS
+ * @version 1.0
+ */
+;var winston = require('winston')
+    , dateFormat = require('dateformat')
+    , clc = require('cli-color')
+    , loadLocalConfig = require('./local')
+    , loadProductionConfig = require('./production')
+    , loadDevelopmentConfig = require('./development');
+
 winston.emitErrs = true;
 
-var mapping = {
-    log: clc.blue,
-    warn: clc.yellow,
-    error: clc.red.bold,
-    info: clc.cyan
+/**
+ * @description Defines the color for console
+ */
+var consoleColorMap = {
+      "log": clc.blue
+    , "warn": clc.yellow
+    , "error": clc.red.bold
+    , "info": clc.cyan
 };
 
+/**
+ * Apply the console color to the actual consoles
+ * @description Adds the timestamp & colors to the console function
+ */
 ["log", "warn", "error", "info"].forEach(function(method) {
     var oldMethod = console[method].bind(console);
     console[method] = function() {
+        var res = [];
+        for (var x in arguments)
+            if (arguments.hasOwnProperty(x))
+                res.push(arguments[x]);
         oldMethod.apply(
-            console, [mapping[method](dateFormat(new Date(), "ddd, mmm d yyyy h:MM:ss TT Z")), mapping[method](method), ':']
-            .concat(mapping[method](arguments[0]))
+            console, [consoleColorMap[method](dateFormat(new Date(), "ddd, mmm d yyyy h:MM:ss TT Z")), consoleColorMap[method](method), ':']
+            .concat(consoleColorMap[method](res.join(" ")))
         );
     };
 });
 
+/**
+ * @description Combine all the require config files.
+ *
+ */
 var config = {
-    production: {
-        host: '',
-        port: 80,
-        session: {
-            key: 'the.express.session.id',
-            secret: 'something.super.secret'
-        },
-        database: 'mongodb://<user>:<pwd>@mongodb.host.net:27017/db',
-        twitter: {
-            consumerKey: 'consumer Key',
-            consumerSecret: 'consumer Secret',
-            callbackURL: 'http://yoururl.com/auth/twitter/callback'
-        },
-        logger: new winston.Logger({
-            transports: [
-                new winston.transports.File({
-                    filename: '/var/log/server.log',
-                    level: 'error'
-                }),
-                new winston.transports.Console({
-                    level: 'debug',
-                    handleExceptions: true,
-                    json: false,
-                    colorize: true
-                })
-            ],
-            exitOnError: false
-        })
-    },
-    development: {
-        host: 'localhost',
-        port: process.env.NODE_PORT || 3030,
-        session: {
-            key: 'the.express.session.id',
-            secret: 'something.super.secret'
-        },
-        database: 'mongodb://127.0.0.1:27017/fundoohr',
-        twitter: {
-            consumerKey: 'consumer Key',
-            consumerSecret: 'consumer Secret',
-            callbackURL: 'http://127.0.0.1:3000/auth/twitter/callback'
-        },
-        logger: new winston.Logger({
-            transports: [
-                new winston.transports.File({
-                    level: 'info',
-                    filename: './logs/all-logs.log',
-                    handleExceptions: true,
-                    json: true,
-                    maxsize: 5242880, //5MB
-                    maxFiles: 5,
-                    colorize: false
-                }),
-                new winston.transports.Console({
-                    level: 'debug, error',
-                    handleExceptions: true,
-                    json: true,
-                    colorize: true
-                })
-            ],
-            exitOnError: false,
-            emitErrs: true
-        }),
-        stream: {
-            write: function(message, encoding) {
-                this.logger.info(message);
-            }
-        }
-    },
-    default: {
-        host: 'localhost',
-        port: process.env.NODE_PORT || 3030,
-        session: {
-            key: 'the.express.session.id',
-            secret: 'something.super.secret'
-        },
-        database: 'mongodb://127.0.0.1:27017/fundoohr',
-        twitter: {
-            consumerKey: 'consumer Key',
-            consumerSecret: 'consumer Secret',
-            callbackURL: 'http://127.0.0.1:3000/auth/twitter/callback'
-        },
-        logger: new winston.Logger({
-            transports: [
-                new winston.transports.File({
-                    level: 'info',
-                    filename: './logs/all-logs.log',
-                    handleExceptions: true,
-                    json: true,
-                    maxsize: 5242880, //5MB
-                    maxFiles: 5,
-                    colorize: false
-                }),
-                new winston.transports.Console({
-                    level: 'debug,error',
-                    handleExceptions: true,
-                    json: true,
-                    colorize: true
-                })
-            ],
-            exitOnError: false,
-            emitErrs: true
-        }),
-        stream: {
-            write: function(message, encoding) {
-                this.logger.info(message);
-            }
-        }
-    }
+      "production": loadProductionConfig
+    , "development": loadDevelopmentConfig
+    , "local": loadLocalConfig
 }
 
+/**
+ * @exports : Exports the Config Environment based Configuration
+ *
+ */
 exports.get = function get(env) {
-    return config[env] || config.default;
-}
+    this.env = config[env] || config.local;
+    this.ename = (this.env.name) ? this.env.name : '';
+    console.log("Environment Set to:", this.ename);
+    return this.env;
+};
