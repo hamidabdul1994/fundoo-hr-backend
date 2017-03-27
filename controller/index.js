@@ -11,7 +11,7 @@ app.use("/readEmployeeDayAttendance", require("./readEmployeeDayAttendance"));
 app.use("/createEmployeeDayAttendance", require("./createEmployeeDayAttendance"));
 app.use("/searchEmployeeByName", require("./searchEmployeeByName"));
 
-app.use("/readEmployee", require("./readEmployee"));
+app.use("/readEmployeeDetails", require("./readEmployee"));
 /*
 app.use("/readEmployeeHRData", require("./readEmployeeHRData"));
 app.use("/readEmployeePersonalData", require("./readEmployeePersonalData"));
@@ -19,14 +19,14 @@ app.use("/readEmployeeProfileData", require("./readEmployeeProfileData"));
 app.use("/readEmployeeBankData", require("./readEmployeeBankData"));
 app.use("/readEmployeeTrackingData", require("./readEmployeeTrackingData"));
 */
-app.use("/updateEmployee", require("./updateEmployee"));
-
+app.use("/updateEmployeeDetails", require("./updateEmployee"));
+/*
 app.use("/updateEmployeeHRData", require("./updateEmployeeHRData"));
 app.use("/updateEmployeePersonalData", require("./updateEmployeePersonalData"));
 app.use("/updateEmployeeProfileData", require("./updateEmployeeProfileData"));
 app.use("/updateEmployeeTrackingData", require("./updateEmployeeTrackingData"));
 app.use("/updateEmployeeBankData", require("./updateEmployeeBankData"));
-
+*/
 app.use("/readLeaveEmployee", require("./readLeaveEmployee"));
 app.use("/readFalloutAttendanceEmployee", require("./readFalloutAttendanceEmployee"));
 app.use("/readUnmarkedAttendanceEmployee", require("./readUnmarkedAttendanceEmployee"));
