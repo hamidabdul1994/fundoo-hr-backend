@@ -3,11 +3,10 @@ var express = require('express'),
     firebase = require("../config/database/firebase"),
     commonMethod = require("../common/commonMethod"),
     config = require('../config/static/'),
-    User = require('../model/userSchema').UserSchema,
+    User = require('../model/userSchema').User,
     router = express.Router();
 
 router.post("/", function (request, response) {
-  console.log(User);
     var result, errors;
     try {
         request.filter();
