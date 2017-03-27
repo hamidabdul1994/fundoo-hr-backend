@@ -38,6 +38,7 @@ var express = require('express'),
     LocalStrategy = require('passport-local').Strategy,
     config = require('./config/').get(process.env.NODE_ENV);
 
+
 var app = express();
 var subpath = express();
 app.set('database', config.database);

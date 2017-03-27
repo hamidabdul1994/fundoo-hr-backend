@@ -1,7 +1,7 @@
 /**
- * developement.js
+ * local.js
  *
- * Developement file is the default setup expected to have on a localmachine to work with the Production config
+ * Local file is the setup required for running the app locally
  *
  * @author  Dilip <dilip.more@bridgelabz.com>
  * @license ICS
@@ -10,11 +10,11 @@
 ;var winston = require('winston');
 
 /**
- * @exports : Exports developement Config Environment based Configuration
+ * @exports : Exports local Config Environment based Configuration
  *
  */
 module.exports = {
-      "name": 'Development'
+      "name": 'local'
     , "host": 'localhost'
     , "port": process.env.NODE_PORT || 3030
     , "session": {
@@ -39,7 +39,7 @@ module.exports = {
                 , "colorize": false
             })
             , new winston.transports.Console({
-                  "level": 'debug, error'
+                  "level": 'debug,error'
                 , "handleExceptions": true
                 , "json": true
                 , "colorize": true
