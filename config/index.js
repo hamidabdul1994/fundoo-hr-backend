@@ -3,6 +3,16 @@ var winston = require('winston'),
     clc = require('cli-color');
 winston.emitErrs = true;
 
+//
+// var error = console.error;
+// console.error = function() {
+//     error.apply(console, [dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM:ss TT Z")].concat(" error :", (typeof arguments[0] != undefined) ? arguments[0] : arguments));
+// }
+// var log = console.log;
+// console.log = function() {
+//     log.apply(console, [dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM:ss TT Z")].concat(" log   :", (typeof arguments[0] != undefined) ? arguments[0] : arguments));
+// }
+
 var mapping = {
     log: clc.blue,
     warn: clc.yellow,

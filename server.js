@@ -38,17 +38,6 @@ var express = require('express'),
     LocalStrategy = require('passport-local').Strategy,
     config = require('./config/').get(process.env.NODE_ENV);
 
-
-var error = console.error;
-console.error = function() {
-    error.apply(console, [dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM:ss TT Z")].concat(" error :", (typeof arguments[0] != undefined) ? arguments[0] : arguments));
-}
-var log = console.log;
-console.log = function() {
-    log.apply(console, [dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM:ss TT Z")].concat(" log   :", (typeof arguments[0] != undefined) ? arguments[0] : arguments));
-}
-
-
 var app = express();
 var subpath = express();
 app.set('database', config.database);
