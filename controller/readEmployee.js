@@ -8,9 +8,7 @@ router.get("/:requiredData", function(request, response) {
     var result = {},
         errors;
     try {
-        console.log(JSON.stringify(result));
         result = config.defaultResult; //Setting Default Result as false
-        console.log(JSON.stringify(result));
         var employeeArea = request.params.requiredData;
         if (config.employeeArea.indexOf(employeeArea) === -1) {
             throw "Bad Parameter Conntact to administrator"; //Generating Error While not Finding param in array
@@ -23,7 +21,6 @@ router.get("/:requiredData", function(request, response) {
                         errors = request.validationErrors(); // isValid = isValid.useFirstErrorOnly();
                         throw errors[0].msg;
                     }
-                    console.log(JSON.stringify(result));
                     result.status = true;
                     result.message = "Successfully Generated";
                     result[employeeArea] = {
