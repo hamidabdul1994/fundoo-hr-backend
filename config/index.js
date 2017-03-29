@@ -35,9 +35,10 @@ var consoleColorMap = {
     var oldMethod = console[method].bind(console);
     console[method] = function() {
         var res = [];
-        for (var x in arguments)
+        for (var x in arguments){
             if (arguments.hasOwnProperty(x))
                 res.push(arguments[x]);
+        }
         oldMethod.apply(
             console, [consoleColorMap[method](dateFormat(new Date(), "ddd, mmm d yyyy h:MM:ss TT Z")), consoleColorMap[method](method), ':']
             .concat(consoleColorMap[method](res.join(" ")))
@@ -55,13 +56,21 @@ var config = {
     , "local": loadLocalConfig
 }
 
+var getDomainURL = function(that){
+    return that.config.host+':'+that.config.port;
+}
+//
+// var domainUrl = function(){
+//     console.log(config);
+// }
 /**
  * @exports : Exports the Config Environment based Configuration
  *
  */
 exports.get = function get(env) {
-    this.env = config[env] || config.local;
-    this.ename = (this.env.name) ? this.env.name : '';
+    this.config = config[env] || config.local;
+    this.ename = (this.config.name) ? this.config.name : '';
+    this.config.domainURL = getDomainURL(this);
     console.log("Environment Set to:", this.ename);
-    return this.env;
+    return this.config;
 };

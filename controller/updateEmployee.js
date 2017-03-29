@@ -34,6 +34,9 @@ router.put("/:requiredData", function(request, response) {
     });
         }
         result.status = true;
+        result.message = "Successfully Updated";
+        var updateData = request.body;
+        response.send(result);
     } catch (e) {
         if (!config.checkSystemErrors(e)) {
             result.message = e;

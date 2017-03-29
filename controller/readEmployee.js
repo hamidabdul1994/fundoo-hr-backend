@@ -43,6 +43,7 @@ router.get("/:requiredData", function(request, response) {
         console.log(JSON.stringify(result));
         response.status(401).json(result);
     }
+
 });
 
 module.exports = router;

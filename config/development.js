@@ -7,7 +7,8 @@
  * @license ICS
  * @version 1.0
  */
-;var winston = require('winston');
+ ;var  winston = require('winston')
+     , moment = require('moment');
 
 /**
  * @exports : Exports developement Config Environment based Configuration
@@ -21,28 +22,34 @@ module.exports = {
           "key": 'the.express.session.id'
         , "secret": 'something.super.secret'
     }
+    , "swagger": true
     , "database": 'mongodb://127.0.0.1:27017/fundoohr'
-    , "twitter": {
-          "consumerKey": 'consumer Key'
-        , "consumerSecret": 'consumer Secret'
-        , "callbackURL": 'http://127.0.0.1:3000/auth/twitter/callback'
-    }
     , "logger": new winston.Logger({
         "transports": [
             new winston.transports.File({
-                  "level": 'info'
+                  "level": 'error'
                 , "filename": './logs/all-logs.log'
                 , "handleExceptions": true
                 , "json": true
                 , "maxsize": 5242880 //5MB
                 , "maxFiles": 5
                 , "colorize": false
+                , "prettyPrint": true
+                , "zippedArchive": true
+                , "timestamp": function() {
+                    return moment.utc().format();
+                }
             })
             , new winston.transports.Console({
-                  "level": 'debug, error'
+                  "level": 'info,varbose,debug,silly'
                 , "handleExceptions": true
                 , "json": true
                 , "colorize": true
+                , "prettyPrint": true
+                , "humanReadableUnhandledException": true
+                , "timestamp": function() {
+                    return moment.utc().format();
+                }
             })
         ]
         , "exitOnError": false

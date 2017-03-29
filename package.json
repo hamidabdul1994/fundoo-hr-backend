@@ -46,6 +46,8 @@
     "redis": "^2.6.5",
     "stylus": "*",
     "swagger-node-express": "~2.0",
+    "swagger-tools": "^0.10.1",
+    "swagger-ui-middleware": "^1.0.0",
     "winston": "^2.3.1"
   },
   "devDependencies": {},
