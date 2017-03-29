@@ -69,15 +69,55 @@ var validationSchema = {
         "contractSignDate": {},
         "initiateTransfer": {}
     },
-    "employeeData":{
-      "engineerID": { in: 'query',
-          notEmpty: {
-              errorMessage: 'engineerID field is require & cannot be blank.'
-          }
-      }
+    "employeeData": {
+        "engineerID": { in: 'query',
+            notEmpty: {
+                errorMessage: 'engineerID field is require & cannot be blank.'
+            }
+        }
+    },
+    "employeeDataPut": {
+        "engineerID": { in: 'body',
+            notEmpty: {
+                errorMessage: 'engineerID field is require & cannot be blank.'
+            }
+        }
+    },
+    "emailSend": {
+        "date": { in: "body",
+            notEmpty: {
+                errorMessage: 'Date field is require & cannot be blank.'
+            }
+        }
     }
 };
-
+/**
+ * @description Validation object for the data requested.
+ */
+var emailTemplate = {
+    "leave": {
+        from: '"BridgeLabz Admin" <fundoohr2016@gmail.com>', // sender address
+        to: "#email", // list of receivers
+        subject: 'Regarding Leave  ', // Subject line
+        // text: 'Hello world ', // plaintext body
+        html: '<b>Hello #name </b><br/><p>It is to bring to your kind notice That you have taken extra leaves, So your Payment could be deductd as per your number of leaves, which is you taken. </p><br/><br/>\
+      If you have any queries please contact admin using the given link :<a href="http://localhost/fundooHrAdmin">http://localhost/fundooHrAdmin</a><br/> Thanking you' // html body
+    },
+    "unmarked": {
+        from: '"BridgeLabz Admin" <fundoohr2016@gmail.com>', // sender address
+        to: "#email", // list of receivers
+        subject: 'Regarding Attendance', // Subject line
+        html: '<b>Hello #name </b><br/><p>Please mark your Attendance for date: #date </p>Mark Attendance using <a href="http://localhost/fundooHr">http://localhost/fundooHr</a><br/> Thanking you' // html body
+    },
+    "fallout": {
+        from: '"BridgeLabz Admin" <fundoohr2016@gmail.com>', // sender address
+        to: '#email', // list of receivers'hamidabdul1994@gmail.com'
+        subject: 'Regarding Attendance Fallout ', // Subject line
+        // text: 'Hello world ', // plaintext body
+        html: '<b>Hello #name!</b><br/><p>It is to bring to your kind notice That you have failed to mark your attendance for three and more than three days in a month #date .Please do so immediately </p><br/>Mark Attendance using <a href="http://localhost/fundooHr">http://localhost/fundooHr</a><br/>\
+      If you have any queries please contact admin using the given link :<a href="http://localhost/fundooHrAdmin">http://localhost/fundooHrAdmin</a><br/> Thanking you' // html body
+    }
+};
 /**
  * @description Default return object for all the other system/Programming errors
  * @key status @value false
@@ -106,11 +146,15 @@ var checkSystemErrors = function(err) {
  * @param {any} type object/string
  * @returns Array
  */
-var employeeArea = ["hr", "personal", "profile", "bank", "track"];
+var enumData = {
+    "employeeArea": ["hr", "personal", "profile", "bank", "track"],
+    "notificationType": ["unmarked", "fallout", "leave"]
+};
 
 module.exports = {
     validationSchema: validationSchema,
     checkSystemErrors: checkSystemErrors,
     defaultResult: defaultResult,
-    employeeArea: employeeArea
-}
+    enumData: enumData,
+    emailTemplate: emailTemplate
+};

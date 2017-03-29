@@ -1,32 +1,28 @@
-var Express = require('express');
-var router = Express.Router();
-var commonMethod = require("../common/commonMethod");
-var deriveDataEvent = require("../common/events");
+var express = require('express');
+var router = express.Router();
 var config = require('../config/static');
 
-router.get("/:requiredData", function(request, response) {
+
+router.post("/:notificationType", function(request, response) {
     var result = {},
         errors;
     try {
         result = config.defaultResult; //Setting Default Result as false
-        var employeeArea = request.params.requiredData;
-        if (config.enumData.employeeArea.indexOf(employeeArea) === -1) {
+        var notificationType = request.params.notificationType;
+        if (config.enumData.notificationType.indexOf(notificationType) === -1) {
             throw "Bad Parameter Conntact to administrator"; //Generating Error While not Finding param in array
         } else {
             // if (typeof config.validationSchema.employeeData != undefined) {
-            request.check(config.validationSchema.employeeData);
+            request.check(config.validationSchema.emailSend);
             request.getValidationResult().then(function(isValid) {
                 try {
                     if (!isValid.isEmpty()) {
                         errors = request.validationErrors(); // isValid = isValid.useFirstErrorOnly();
                         throw errors[0].msg;
                     }
+                    //Here we will put business logic
                     result.status = true;
-                    result.message = "Successfully Generated";
-                    result[employeeArea] = {
-                        "data": "data"
-                    };
-                    var updateData = request.body;
+                    result.message = "Successfully Sent mail Generated";
                     response.send(result);
                 } catch (e) {
                     if (!config.checkSystemErrors(e)) {
@@ -43,6 +39,7 @@ router.get("/:requiredData", function(request, response) {
         console.log(JSON.stringify(result));
         response.status(401).json(result);
     }
+
 });
 
 module.exports = router;

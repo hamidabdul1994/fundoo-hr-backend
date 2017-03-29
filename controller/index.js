@@ -33,10 +33,13 @@ app.use("/readUnmarkedAttendanceEmployee", require("./readUnmarkedAttendanceEmpl
 app.use("/readMonthlyAttendanceSummary", require("./readMonthlyAttendanceSummary"));
 app.use("/readDashboardData", require("./readDashboardData"));
 
+app.use("/sendEmailToEmployee", require("./sendEmailToEmployee"));
+
+/*
 app.use("/sendEmailToUnmarkedEmployee", require("./sendEmailToUnmarkedEmployee"));
 app.use("/sendEmailToFalloutEmployee", require("./sendEmailToFalloutEmployee"));
 app.use("/sendEmailToLeaveEmployee", require("./sendEmailToLeaveEmployee"));
-
+*/
 app.use("/readAllEmployee", require("./readAllEmployee"));
 app.use("/readInternEmployee", require("./readInternEmployee"));
 app.use("/downloadSalaryReport", require("./downloadSalaryReport"));
