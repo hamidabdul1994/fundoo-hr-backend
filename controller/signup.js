@@ -33,24 +33,23 @@ router.post("/", function(request, response, next) {
                 emailAddress: request.body.emailAddress,
                 firstName: request.body.firstName || '',
                 lastName: request.body.lastName || '',
-                gender: request.body.gender.toUpperCase(),
+                gender: (request.body.gender)?request.body.gender.toUpperCase():'',
                 phone: request.body.phone || '',
                 engineerID: request.body.engineerID || '',
-                engineerType: request.body.engineerType.toUpperCase() || '',
+                engineerType: ((request.body.engineerType)?request.body.engineerType.toUpperCase():'') || '',
             });
             User.User.register(newUser, request.body.password, function(error, data) {
                 try {
                     if (error) {
                         if (error.name == 'ValidationError') {
-                          console.log(error);
                             for (var field in error.errors) {
                                 if(error.errors[field].kind == 'enum'){
                                     if(typeof error.errors[field].message !== undefined)
                                         throw error.errors[field].message;
                                     throw 'Invalid '+error.errors[field].path+'. Please select a valid value';
-                                }else if(error.errors[field].kind == 'Duplicate value'){
+                                } else if (error.errors[field].kind == 'Duplicate value'){
                                     throw 'A user with the given '+error.errors[field].path+' is already registered';
-                                }else if(error.errors[field].kind == 'required'){
+                                } else if (error.errors[field].kind == 'required'){
                                     throw 'A user must have '+error.errors[field].path+'. Please enter select/enter some value.';
                                 }
                             }

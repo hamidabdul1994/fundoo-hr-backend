@@ -22,6 +22,8 @@ module.exports = {
           "key": 'the.express.session.id'
         , "secret": 'something.super.secret'
     }
+    , 'ttl': 3600000 //1 hour
+    , 'resetTokenExpiresMinutes': 20 //20 minutes later
     , "swagger": true
     , "database": 'mongodb://127.0.0.1:27017/fundoohr'
     , "logger": new winston.Logger({

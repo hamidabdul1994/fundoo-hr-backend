@@ -1,4 +1,4 @@
-/*
+/**
  * @name Base Schema 
  * @path models/base.js
  * @file base.js
@@ -61,5 +61,5 @@ var BaseSchema = new AbstractSchema();
 
 module.exports = {
     BaseModel: mongoose.model('Base', BaseSchema), // Create the base schema & extend some behavior
-    BaseSchema: AbstractSchema,
-}
+    BaseSchema: AbstractSchema
+};

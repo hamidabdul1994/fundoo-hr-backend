@@ -56,13 +56,27 @@ var config = {
     , "local": loadLocalConfig
 }
 
-var getDomainURL = function(that){
-    return that.config.host+':'+that.config.port;
+/**
+ * @description It return true if the current system is production
+ * @param {*} config
+ */
+var isProduction = function(config){
+    return config.name == 'production';
 }
-//
-// var domainUrl = function(){
-//     console.log(config);
-// }
+
+/**
+ * @description Return the domain URI
+ * @param {*} that is configuration
+ */
+var getDomainURL = function(that){
+    this.host = that.config.host;
+    this.port = that.config.port;
+    if(isProduction(that.config)){
+        return this.host;
+    }
+    return this.host+':'+this.port;
+}
+
 /**
  * @exports : Exports the Config Environment based Configuration
  *

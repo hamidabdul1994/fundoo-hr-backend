@@ -147,7 +147,7 @@
                 "tags": [
                     "Dashboard"
                 ],
-                "description": "Unmarked attendance employee list for a perticular date, List of employee who took leaves 2 or more than 2 days in a month. Employees who didn't marked attendace for 3 or more than 3 days in a month (/readFalloutAttendanceEmployee, /readLeaveEmployee)",
+                "description": "Unmarked attendance employee list for a particular date, List of employee who took leaves 2 or more than 2 days in a month. Employees who didn't marked attendace for 3 or more than 3 days in a month (/readFalloutAttendanceEmployee, /readLeaveEmployee)",
                 "operationId": "employeeAttendanceSnapshot",
                 "produces": [
                     "application/json"
@@ -297,12 +297,12 @@
                 }
             }
         },
-        "/readEmployeeMonthlyAttendance": {
+        "/readEmployeeMonthAttendance": {
             "get": {
                 "tags": [
-                    "Attendance", "Engineer"
+                    "Attendance"
                 ],
-                "description": "Recorded attendance for the employee in a month",
+                "description": "Shows the month attendance record of an employee.",
                 "operationId": "employeeMonthAttendance",
                 "produces": [
                     "application/json"
@@ -489,10 +489,9 @@
                 }
             }
         },
-        "/readAllEmployee": {
+        "/readEmployeeSalaryReport": {
             "get": {
                 "tags": [
-                    "Engineer",
                     "Report"
                 ],
                 "description": "Generate the Salary report/invoice of all the employee",
@@ -523,10 +522,9 @@
                 }
             }
         },
-        "/readInternEmployee": {
+        "/readEmployeeAttendanceReport": {
             "get": {
                 "tags": [
-                    "Engineer",
                     "Report"
                 ],
                 "description": "Internship Employee list to generate attendance reports who are working with tech company",
@@ -612,13 +610,13 @@
                 }
             }
         },
-        "/searchEmployeeByName": {
+        "/searchAllEmployee/{cursor}": {
             "get": {
                 "tags": [
-                    "Engineer", "Search"
+                    "Search"
                 ],
-                "description": "Search result for employee by name",
-                "operationId": "searchEmployeeListByName",
+                "description": "Get all the employee list in sorted order. It will read `10` employees per request untill the cursor returns `0` which means end of search result.",
+                "operationId": "searchAllEmployee",
                 "produces": [
                     "application/json"
                 ],
@@ -631,18 +629,58 @@
                     "type": "string"
                 }],
                 "responses": {
-                    "responses": {
-                        "200": {
-                            "description": "Success in getting list of employee for the searched string",
-                            "schema": {
-                                "$ref": "#/definitions/searchEmployeeListByNameSuccess"
-                            }
-                        },
-                        "401": {
-                            "description": "Failed to get the list of list of employee for the searched string",
-                            "schema": {
-                                "$ref": "#/definitions/searchEmployeeListByNameFailure"
-                            }
+                    "200": {
+                        "description": "Success in getting list of employee for the searched string",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeListSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to get the list of list of employee for the searched string",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeListFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/searchEmployeeSocket": {
+            "get": {
+                "tags": [
+                    "Search"
+                ],
+                "description": "Socket search result for the key entered `query`",
+                "operationId": "searchEmployeeSocket",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                {
+                    "name": "x-token",
+                    "in": "header",
+                    "description": "Token needs to validate & authenticate",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "name": "query",
+                    "query": "Query",
+                    "in": "query",
+                    "description": "Query is the parameter passed to the Socket to enable connection start getting the result.",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting socket search result",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeSocketSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to get the socket search result.",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeSocketFailure"
                         }
                     }
                 }
@@ -651,9 +689,9 @@
         "/searchEmployee/{searchKey}/{cursor}": {
             "get": {
                 "tags": [
-                    "Engineer", "Search"
+                    "Search"
                 ],
-                "description": "Search the engineer by search key & cursor, Search key matches the Alphabets 'A', 'B', 'C' or engineer name, city, company",
+                "description": "Search the engineer by search key (`searchKey`) & cursor. Search key matches the set (engineer name/email) OR (city) OR (company)",
                 "operationId": "searchEmployeeByKey",
                 "produces": [
                     "application/json"
@@ -1271,6 +1309,292 @@
                 }
             }
         },
+        "searchEmployeeListSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the employee list"
+                },
+                "employeeList": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Bhushan",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000021",
+                            "emailAddress": "me.bhushan4u@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40003EI"
+                        }]
+                    }
+                }
+            }
+        },
+        "searchEmployeeListFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to get the employee list for the searched employee name"
+                }
+            }
+        },
+        "searchEmployeeSocketSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully returned the search result."
+                },
+                "employeeResultByNameEmail": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        }]
+                    }
+                },
+                "employeeResultByCity": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "city": "Mumbai"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "city": "Mumbai"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "city": "Mumbai"
+                        }]
+                    }
+                },
+                "employeeResultByCompany": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "company": "Meru"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "company": "Meru"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "company": "Meru"
+                        }]
+                    }
+                }
+            }
+        },
+        "searchEmployeeSocketFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to get the search result"
+                }
+            }
+        },
         "searchEmployeeListByNameSuccess": {
             "properties": {
                 "status": {
@@ -1288,7 +1612,7 @@
                     "schema": {
                         "type": "array",
                         "example": [{
-                            "name": "Amit R Singh",
+                            "name": "Amit Sharma",
                             "status": "Fellowship",
                             "company": "BridgeLabz",
                             "mobile": "9594368083",
@@ -1444,7 +1768,7 @@
                     "required": true,
                     "type": "object",
                     "example": {
-                        "name": "Amit R Singh",
+                        "name": "Amit Sharma",
                         "status": "Fellowship",
                         "company": "BridgeLabz",
                         "mobile": "9594368083",
@@ -1488,7 +1812,7 @@
                     "required": true,
                     "type": "object",
                     "example": {
-                        "name": "Amit R Singh",
+                        "name": "Amit Sharma",
                         "status": "Fellowship",
                         "company": "BridgeLabz",
                         "mobile": "9876000022",
@@ -1741,7 +2065,7 @@
                             "name": {
                                 "type": "string",
                                 "required": true,
-                                "example": "Amit R Singh"
+                                "example": "Amit Sharma"
                             },
                             "emailAddress": {
                                 "type": "string",
@@ -2147,7 +2471,7 @@
                         "type": "array",
                         "example": [{
                             "engineerID": "40001EI",
-                            "name": "Amit R Singh",
+                            "name": "Amit Sharma",
                             "status": "Fellowship",
                             "company": "BridgeLabz",
                             "mobile": "9594368083",

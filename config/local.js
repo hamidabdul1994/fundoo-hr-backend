@@ -17,11 +17,13 @@
 module.exports = {
       "name": 'local'
     , "host": 'localhost'
-    , "port": process.env.NODE_PORT || 3030
+    , "port": process.env.NODE_PORT || 1337
     , "session": {
           "key": 'the.express.session.id'
         , "secret": 'something.super.secret'
     }
+    , 'ttl': 3600000 //1 hour
+    , 'resetTokenExpiresMinutes': 20 //20 minutes later
     , "swagger": true
     , "database": 'mongodb://127.0.0.1:27017/fundoohr'
     , "logger": new winston.Logger({

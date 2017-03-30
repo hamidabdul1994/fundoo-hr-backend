@@ -1,7 +1,7 @@
 'use-strict';
 
 var mongoose = require('mongoose'),
-  dbURI = 'mongodb://localhost/fundoohr';
+  dbURI = 'mongodb://localhost/fundoohr1';
 
 mongoose.Promise = global.Promise; // Fix for error : Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
 
