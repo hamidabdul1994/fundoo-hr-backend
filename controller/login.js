@@ -24,7 +24,7 @@ router.post("/", function (request, response) {
             if (!isValid.isEmpty()) {
                 errors = request.validationErrors(); // isValid = isValid.useFirstErrorOnly();
                 console.error(errors);
-                throw new Error(errors[0].msg);
+                throw errors[0].msg;
             }
             var email = request.body.emailAddress,
                 password = request.body.password;
