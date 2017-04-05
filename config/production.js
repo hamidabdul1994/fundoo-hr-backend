@@ -7,7 +7,8 @@
  * @license ICS
  * @version 1.0
  */
-;var winston = require('winston');
+;var  winston = require('winston')
+    , moment = require('moment');
 
 /**
  * @exports : Exports Production (Live) Config Environment based Configuration
@@ -21,22 +22,30 @@ module.exports = {
           "key": 'the.express.session.id'
         , "secret": 'something.super.secret'
     }
+    , 'ttl': 3600000 //1 hour
+    , 'resetTokenExpiresMinutes': 20 //20 minutes later
+    , "swagger": false
     , "database": 'mongodb://<user>:<pwd>@mongodb.host.net:27017/db'
-    , "twitter": {
-          "consumerKey": 'consumer Key'
-        , "consumerSecret": 'consumer Secret'
-        , "callbackURL": 'http://yoururl.com/auth/twitter/callback'
-    }
     , "logger": new winston.Logger({
         "transports": [
             new winston.transports.File({
-                  "filename": '/var/log/server.log'
-                , "level": 'error'
+                  "level": 'error,warn'
+                , "filename": './logs/all-logs.log'
+                , "handleExceptions": true
+                , "json": true
+                , "maxsize": 5242880 //5MB
+                , "maxFiles": 5
+                , "colorize": false
+                , "prettyPrint": true
+                , "zippedArchive": true
+                , "timestamp": function() {
+                  return moment.utc().format();
+                }
             })
             , new winston.transports.Console({
-                  "level": 'debug'
+                  "level": 'info'
                 , "handleExceptions": true
-                , "json": false
+                , "json": true
                 , "colorize": true
             })
         ]

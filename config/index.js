@@ -35,9 +35,10 @@ var consoleColorMap = {
     var oldMethod = console[method].bind(console);
     console[method] = function() {
         var res = [];
-        for (var x in arguments)
+        for (var x in arguments){
             if (arguments.hasOwnProperty(x))
                 res.push(arguments[x]);
+        }
         oldMethod.apply(
             console, [consoleColorMap[method](dateFormat(new Date(), "ddd, mmm d yyyy h:MM:ss TT Z")), consoleColorMap[method](method), ':']
             .concat(consoleColorMap[method](res.join(" ")))
@@ -56,12 +57,34 @@ var config = {
 }
 
 /**
+ * @description It return true if the current system is production
+ * @param {*} config
+ */
+var isProduction = function(config){
+    return config.name == 'production';
+}
+
+/**
+ * @description Return the domain URI
+ * @param {*} that is configuration
+ */
+var getDomainURL = function(that){
+    this.host = that.config.host;
+    this.port = that.config.port;
+    if(isProduction(that.config)){
+        return this.host;
+    }
+    return this.host+':'+this.port;
+}
+
+/**
  * @exports : Exports the Config Environment based Configuration
  *
  */
 exports.get = function get(env) {
-    this.env = config[env] || config.local;
-    this.ename = (this.env.name) ? this.env.name : '';
+    this.config = config[env] || config.local;
+    this.ename = (this.config.name) ? this.config.name : '';
+    this.config.domainURL = getDomainURL(this);
     console.log("Environment Set to:", this.ename);
-    return this.env;
+    return this.config;
 };

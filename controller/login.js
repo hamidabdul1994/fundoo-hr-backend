@@ -1,3 +1,5 @@
+
+
 var express = require('express'),
     util = require('util'),
     firebase = require("../config/database/firebase"),
@@ -24,7 +26,7 @@ router.post("/", function (request, response) {
             if (!isValid.isEmpty()) {
                 errors = request.validationErrors(); // isValid = isValid.useFirstErrorOnly();
                 console.error(errors);
-                throw errors[0].msg;
+                throw new Error(errors[0].msg);
             }
             var email = request.body.emailAddress,
                 password = request.body.password;
@@ -56,3 +58,4 @@ router.post("/", function (request, response) {
 });
 
 module.exports = router;
+

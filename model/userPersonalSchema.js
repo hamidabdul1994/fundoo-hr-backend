@@ -9,11 +9,10 @@
  * Module dependencies
  */
 var mongoose = require('mongoose'),
-    User = require('./userSchema'),
+    User = require('./userSchema').User,
     Base = require('./base'); // Include the base schema
 
 var ObjectId = mongoose.Schema.Types.ObjectId;
-
 
 /**
  * @description Defining ENUMs for the relation type field which will use for validation.
@@ -30,24 +29,6 @@ var UserPersonalSchema = new Base.BaseSchema({
         ref: 'User',
         unique: true,
         required: true
-    },
-    emailAddress: {
-        type: String,
-        trim: true,
-        lowercase: true,
-        unique: true,
-        required: 'Email address is required',
-        validate: [validate.email, 'invalid email address']
-    },
-    phone: {
-        type: String,
-        validate: {
-            validator: function(v) {
-                var re = /^\d{10}$/;
-                return (v == null || v.trim().length < 1) || re.test(v)
-            },
-            message: 'Invalid phone number.'
-        }
     },
     dob: {
         type: Date,
@@ -87,4 +68,4 @@ var UserPersonalSchema = new Base.BaseSchema({
 /**
  * Expose `UserPersonal` Model
  */
-module.exports = mongoose.model('UserPersonal', UserPersonalSchema);
+module.exports = Base.BaseModel.discriminator('UserPersonal', UserPersonalSchema);

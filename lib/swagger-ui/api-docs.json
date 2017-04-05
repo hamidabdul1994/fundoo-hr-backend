@@ -1,0 +1,2517 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "FundooHR Backend API's Specification",
+        "description": "FundooHR is not a Software product, it is a thinking which make your task easy and efficient. And we are plotting our thining in software product. Which will make our work easy. Basically we are planning to make product based on some different technologies.",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Bridgelabz.com",
+            "email": "admin@bridgelabz.com"
+        }
+    },
+    "basePath": "/",
+    "tags": [{
+            "name": "Login",
+            "description": "Login API for already registered users through the backend."
+        },
+        {
+            "name": "Dashboard",
+            "description": "API for dashborad"
+        },
+        {
+            "name": "Engineer",
+            "description": "API for Engineer data "
+        },
+        {
+            "name": "Attendance",
+            "description": "API for Engineer Attendance"
+        },
+        {
+            "name": "Report",
+            "description": "API for Engineer to download the report"
+        },
+        {
+            "name": "Client",
+            "description": "API for Client (Tech Company)"
+        },
+        {
+	     "name" : "Search",
+	     "description" : "API for searching the engineer."
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "Content-Type": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
+    "paths": {
+        "/login": {
+            "post": {
+                "tags": [
+                    "Login"
+                ],
+                "description": "It authenticates the user email from company database and it returns success response with email and token. For every REST call you need to pass token and crossponding email with some extra request body which is based on REST call's.",
+                "operationId": "login",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "emailID",
+                        "emailID": "Logging EmailID",
+                        "in": "formData",
+                        "description": "Provide a valid email address to authenticate. e.g. your@some-domain.com",
+                        "required": true,
+                        "type": "string",
+                        "default": "admin@bridgelabz.com"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Provide a valid Password",
+                        "required": true,
+                        "type": "string",
+                        "format": "password",
+                        "default": "Bridge@123"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully authentcation the user",
+                        "schema": {
+                            "$ref": "#/definitions/loginResponseSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to authentcation user",
+                        "schema": {
+                            "$ref": "#/definitions/loginResponseFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readDashboardData": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "description": "It return you Dashboard Data",
+                "operationId": "dashboardByDate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "date",
+                        "date": "Date parameter",
+                        "in": "query",
+                        "description": "Date parameter to get the Day, month & Year to filter the Dashboard based on month year",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "String"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfull in retriving the Dashboard Data",
+                        "schema": {
+                            "$ref": "#/definitions/DashboardResponseSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to retrive the Dashboard Data",
+                        "schema": {
+                            "$ref": "#/definitions/DashboardResponseFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readEmployeeAttendanceSnapsot": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "description": "Unmarked attendance employee list for a particular date, List of employee who took leaves 2 or more than 2 days in a month. Employees who didn't marked attendace for 3 or more than 3 days in a month (/readFalloutAttendanceEmployee, /readLeaveEmployee)",
+                "operationId": "employeeAttendanceSnapshot",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "snapshotType",
+                        "snapshotType": "Snapshot Type",
+                        "in": "query",
+                        "description": "Snapshot Type of snapshot e.g. unmarked, fallout, leave",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["unmarked", "fallout", "leave"]
+                    },
+                    {
+                        "name": "date",
+                        "date": "Date",
+                        "in": "query",
+                        "description": "Date parameter to get the Day, Month & Year to filter the Dashboard data, which is based month year. Format needs to be in dd/mm/yyyy for .e.g. 01/01/2017",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "String"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting the employee unmarked/Fallout/Leave attendance snapshot",
+                        "schema": {
+                            "$ref": "#/definitions/employeeAttendanceSnapshotSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to retrive the employee unmarked/Fallout/Leave attendance snapshot",
+                        "schema": {
+                            "$ref": "#/definitions/employeeAttendanceSnapshotFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readMonthlyAttendanceSummary": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "description": "Summary of attandance for the selected range.",
+                "operationId": "attendanceSummaryByDateRange",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "fromDate",
+                        "fromDate": "From Date",
+                        "in": "query",
+                        "description": "From Date parameter to get the Month & Year to get the attendance, Format needs to be in dd/mm/yyyy for .e.g. 01/01/2017",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "toDate",
+                        "toDate": "To Date",
+                        "in": "query",
+                        "description": "To Date parameter to get the Month & Year to get the attendance, Format needs to be in dd/mm/yyyy for .e.g. 01/01/2017",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "String"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in returning the attendance summary for the selected date range",
+                        "schema": {
+                            "$ref": "#/definitions/attendanceSummaryByDateRangeSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to retrive the attendace summary for the selected date range",
+                        "schema": {
+                            "$ref": "#/definitions/attendanceSummaryByDateRangeFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/sendEmailToEmployee": {
+            "post": {
+                "tags": [
+                    "Attendance"
+                ],
+                "description": "Notify employee for unmarked attendace for the date. Date format (dd/mm/yyyy)",
+                "operationId": "emailNotifyUnmarkAttendance",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "notificationType",
+                        "notificationType": "Notification Type",
+                        "in": "query",
+                        "description": "Email notification type e.g. unmarked, fallout, leave",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["unmarked", "fallout", "leave"]
+                    },
+                    {
+                        "name": "date",
+                        "Date": "Unmarked Date",
+                        "in": "query",
+                        "description": "Unmark Date parameter to get the Day, Month & Year. Format needs to be in dd/mm/yyyy for .e.g. 01/01/2017",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in sending notification to the employee for the unmark/fallout/leave date",
+                        "schema": {
+                            "$ref": "#/definitions/emailNofityEmployeeSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to send notification to the employee for the unmark/fallout/leave date",
+                        "schema": {
+                            "$ref": "#/definitions/emailNofityEmployeeFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readEmployeeMonthAttendance": {
+            "get": {
+                "tags": [
+                    "Attendance"
+                ],
+                "description": "Shows the month attendance record of an employee.",
+                "operationId": "employeeMonthAttendance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "engineerID",
+                        "in": "query",
+                        "description": "Engineer ID is unique for each engineer",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "date": "Date to extract month",
+                        "in": "query",
+                        "description": "Date parameter to get the Month & Year. Format needs to be in dd/mm/yyyy for .e.g. 01/01/2017",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting employee attendance record for a month",
+                        "schema": {
+                            "$ref": "#/definitions/employeeMonthAttendanceSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to get the employee attendance record for a month",
+                        "schema": {
+                            "$ref": "#/definitions/employeeMonthAttendanceFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/createEmployeeDayAttendance": {
+            "post": {
+                "tags": [
+                    "Attendance",
+                    "Engineer"
+                ],
+                "description": "Create the employee attendance record",
+                "operationId": "recordEmployeeDayAttendance",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "Scehma",
+                        "in": "body",
+                        "description": "JSON format for sending the employee details & attendance details.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/recordEmployeeDayAttendanceSchema"
+                        }
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting employee attendance record for a month",
+                        "schema": {
+                            "$ref": "#/definitions/recordEmployeeDayAttendanceSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to get the employee attendance record for a month",
+                        "schema": {
+                            "$ref": "#/definitions/recordEmployeeDayAttendanceFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readEmployeeDetails": {
+            "get": {
+                "tags": [
+                    "Engineer"
+                ],
+                "description": "Use 'hr', personal', 'profile', 'tack', 'bank' to get the Engineer HR, Personal, Profile (Educational), Tracking & Bank Account details respectively. Merged API's (readEmployeeHRData, readEmployeePersonalData, readEmployeeProfileData, readEmployeeTrackingData, readEmployeeBankData)",
+                "operationId": "getEmployeeDetails",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "dataType",
+                        "notificationType": "Data Type",
+                        "in": "query",
+                        "description": "Employee Data type e.g. HR, Personal, Profile, Track, Bank",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["hr", "personal", "profile", "track", "bank"]
+                    },
+                    {
+                        "name": "engineerID",
+                        "engineerID": "Engineer ID",
+                        "in": "query",
+                        "description": "Engineer ID needs to be valid",
+                        "required": true,
+                        "type": "string",
+                        "default": "40002EI"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting Employee HR, Personal, Profile (Educational), Tracking & Bank Account details",
+                        "schema": {
+                            "$ref": "#/definitions/getEmployeeDetailsSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to retrive Employee HR, Personal, Profile (Educational), Tracking & Bank Account details",
+                        "schema": {
+                            "$ref": "#/definitions/getEmployeeDetailsFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/updateEmployeeDetails": {
+            "put": {
+                "tags": [
+                    "Engineer"
+                ],
+                "description": "Use 'hr', personal', 'profile', 'tack', 'bank' to update the Engineer HR, Personal, Profile (Educational), Tracking & Bank Account details respectively. Merged API's (updateEmployeeHRData, updateEmployeePersonalData, updateEmployeeProfileData, updateEmployeeTrackingData, updateEmployeeBankData)",
+                "operationId": "updateEmployeeDetails",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "engineerData",
+                        "in": "body",
+                        "description": "JSON format of the HR Data of an employee",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateEmployeeDetailsSchema"
+                        }
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in updating Employee Details",
+                        "schema": {
+                            "$ref": "#/definitions/updateEmployeeDetailsSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to update Employee Details",
+                        "schema": {
+                            "$ref": "#/definitions/updateEmployeeDetailsFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readEmployeeSalaryReport": {
+            "get": {
+                "tags": [
+                    "Report"
+                ],
+                "description": "Generate the Salary report/invoice of all the employee",
+                "operationId": "generateAllEmployeeSalaryReportInvoice",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [{
+                    "name": "x-token",
+                    "in": "header",
+                    "description": "Token needs to validate & authenticate",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in updating Employee Profile Details",
+                        "schema": {
+                            "$ref": "#/definitions/generateAllEmployeeSalaryReportInvoiceSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to update Employee Profile Details",
+                        "schema": {
+                            "$ref": "#/definitions/generateAllEmployeeSalaryReportInvoiceFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readEmployeeAttendanceReport": {
+            "get": {
+                "tags": [
+                    "Report"
+                ],
+                "description": "Internship Employee list to generate attendance reports who are working with tech company",
+                "operationId": "attendanceOfInternshipAtClient",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [{
+                    "name": "x-token",
+                    "in": "header",
+                    "description": "Token needs to validate & authenticate",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in retriving attendance of Internship Employee at client side",
+                        "schema": {
+                            "$ref": "#/definitions/attendanceOfInternshipAtClientSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to retrive attendance of Internship Employee at client side",
+                        "schema": {
+                            "$ref": "#/definitions/attendanceOfInternshipAtClientFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/downloadEmployeeReport": {
+            "post": {
+                "tags": [
+                    "Report"
+                ],
+                "description": "Internship Employee to generate salary/attendance/invoice reports who are working at client (tech company) (Merged API downloadSalaryReport, downloadAttendanceReport, downloadInvoiceReport)",
+                "collectionFormat": "csv",
+                "operationId": "downloadEmployeeReport",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "parameters": [
+                    {
+                        "name": "ReportType",
+                        "ReportType": "Report Type",
+                        "in": "query",
+                        "description": "Report Type e.g. salary, attendance, invoice",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["salary", "attendance", "invoice"],
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "name": "parameters",
+                        "in": "body",
+                        "description": "Send the Employees list in list format as per the said format",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/downloadEmployeeReportSchema"
+                        }
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success in generating salary/attendance/invoice report of Engineer",
+                        "schema": {
+                            "$ref": "#/definitions/generateReportSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to generate salary/attendance/invoice report of Engineer",
+                        "schema": {
+                            "$ref": "#/definitions/generateReportFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/searchAllEmployee/{cursor}": {
+            "get": {
+                "tags": [
+                    "Search"
+                ],
+                "description": "Get all the employee list in sorted order. It will read `10` employees per request untill the cursor returns `0` which means end of search result.",
+                "operationId": "searchAllEmployee",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                {
+                    "name": "x-token",
+                    "in": "header",
+                    "description": "Token needs to validate & authenticate",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting list of employee for the searched string",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeListSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to get the list of list of employee for the searched string",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeListFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/searchEmployeeSocket": {
+            "get": {
+                "tags": [
+                    "Search"
+                ],
+                "description": "Socket search result for the key entered `query`",
+                "operationId": "searchEmployeeSocket",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                {
+                    "name": "x-token",
+                    "in": "header",
+                    "description": "Token needs to validate & authenticate",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "name": "query",
+                    "query": "Query",
+                    "in": "query",
+                    "description": "Query is the parameter passed to the Socket to enable connection start getting the result.",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting socket search result",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeSocketSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to get the socket search result.",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeSocketFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/searchEmployee/{searchKey}/{cursor}": {
+            "get": {
+                "tags": [
+                    "Search"
+                ],
+                "description": "Search the engineer by search key (`searchKey`) & cursor. Search key matches the set (engineer name/email) OR (city) OR (company)",
+                "operationId": "searchEmployeeByKey",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                  {
+                      "name": "searchKey",
+                      "in": "path",
+                      "description": "Search key will match to matches the Alphabets 'A', 'B', 'C' or engineer name, city & company",
+                      "required": true,
+                      "type": "string"
+                  },
+                  {
+                      "name": "cursor",
+                      "in": "path",
+                      "description": "Cursor is the position for the redis. Initially it will be 0.",
+                      "default":0,
+                      "required": true,
+                      "type": "string"
+                  },
+                  {
+                      "name": "x-token",
+                      "in": "header",
+                      "description": "Token needs to validate & authenticate",
+                      "required": true,
+                      "type": "string"
+                 }],
+                "responses": {
+                    "200": {
+                        "description": "response",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeByKeySuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to search employee for the search key",
+                        "schema": {
+                            "$ref": "#/definitions/searchEmployeeByKeyFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readClientWorkingDaysList": {
+            "get": {
+                "tags": [
+                    "Client"
+                ],
+                "description": "Working days of weeek for a client",
+                "operationId": "clientWorkingDaysInWeek",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "clientID",
+                        "clientID": "Client ID",
+                        "in": "query",
+                        "description": "Client ID needs to be valid",
+                        "required": true,
+                        "type": "string",
+                        "default": "1223"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in updating Employee Profile Details",
+                        "schema": {
+                            "$ref": "#/definitions/clientWorkingDaysInWeekSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to update Employee Profile Details",
+                        "schema": {
+                            "$ref": "#/definitions/clientWorkingDaysInWeekFailure"
+                        }
+                    }
+                }
+            }
+        },
+        "/readClientHolidayList": {
+            "get": {
+                "tags": [
+                    "Client"
+                ],
+                "description": "Holiday list",
+                "operationId": "clientHolidayList",
+                "produces": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "clientID",
+                        "clientID": "Client ID",
+                        "in": "query",
+                        "description": "Client ID needs to be valid",
+                        "required": true,
+                        "type": "string",
+                        "default": "1223"
+                    },
+                    {
+                        "name": "year",
+                        "year": "Year",
+                        "in": "query",
+                        "description": "Valid current or next year",
+                        "required": true,
+                        "type": "string",
+                        "default": "1223"
+                    },
+                    {
+                        "name": "x-token",
+                        "in": "header",
+                        "description": "Token needs to validate & authenticate",
+                        "required": true,
+                        "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success in getting the client holiday list for a year",
+                        "schema": {
+                            "$ref": "#/definitions/clientHolidayListSuccess"
+                        }
+                    },
+                    "401": {
+                        "description": "Failed to retrive the client holiday list for a year",
+                        "schema": {
+                            "$ref": "#/definitions/clientHolidayListFailure"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "loginResponseSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "User logged in login Successfully"
+                },
+                "token": {
+                    "required": true,
+                    "type": "String",
+                    "example": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBicmlkZ2VsYWJ6LmNvbSIsImlhdCI6MTQ4Nzc2MDY3NSwiZXhwIjoxNDg4OTcwMjc1fQ.ALOhIMuqtczsrZkR-vtTbceP5djAQNk7CCwoZzKkOCY"
+                }
+            }
+        },
+        "loginResponseFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to authenticate user"
+                }
+            }
+        },
+        "DashboardResponseSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the dashborad data"
+                },
+                "attendanceSummary": {
+                    "type": "schema",
+                    "example": {
+                        "marked": 1,
+                        "unmarked": "35"
+                    }
+                },
+                "attendanceFallout": {
+                    "type": "schema",
+                    "example": {
+                        "falloutEmployee": 35,
+                        "totalEmployee": 36
+                    }
+                },
+                "leaveSummary": {
+                    "type": "schema",
+                    "example": {
+                        "leave": "4"
+                    }
+                }
+            }
+        },
+        "DashboardResponseFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to retrive the dashborad data"
+                }
+            }
+        },
+        "RUAEResponseSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the list of employee unmarked attandance"
+                },
+                "umarkedEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "employeeName": "Shwetali",
+                            "employeeStatus": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000022",
+                            "emailId": "khambeshwetali@ymail.com",
+                            "blStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerId": "40002EI"
+                        },
+                        {
+                            "employeeName": "Bhushan",
+                            "employeeStatus": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000021",
+                            "emailId": "me.bhushan4u@gmail.com",
+                            "blStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerId": "40003EI"
+                        }]
+                    }
+                },
+                "timeStamp": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 1483401600000
+                },
+                "unmarkedNumber": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 2
+                },
+                "totalEmployee": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 36
+                }
+            }
+        },
+        "RUAEResponseFailure": {
+            "properties": {
+                "umarkedEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                            "employeeName": "Shwetali",
+                            "employeeStatus": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000022",
+                            "emailId": "khambeshwetali@ymail.com",
+                            "blStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerId": "40002EI"
+                        },
+                        {
+                            "employeeName": "Bhushan",
+                            "employeeStatus": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000021",
+                            "emailId": "me.bhushan4u@gmail.com",
+                            "blStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerId": "40003EI"
+                        }]
+                    }
+                },
+                "timeStamp": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 1483401600000
+                },
+                "unmarkedNumber": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 2
+                },
+                "totalEmployee": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 36
+                }
+            }
+        },
+        "employeeAttendanceSnapshotSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the employee attendance snapshot"
+                },
+                "umarkedEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "unmarkedNumber": {
+                                "required": true,
+                                "type": "integer",
+                                "example": 2
+                            },
+                            "totalEmployee": {
+                                "required": true,
+                                "type": "integer",
+                                "example": 36
+                            },
+                            "employeeList": [{
+                                "engineerID": "40002EI",
+                                "status": "Fellowship",
+                                "name": "Shwetali",
+                                "company": "BridgeLabz",
+                                "mobile": "9876000022",
+                                "emailAddress": "khambeshwetali@ymail.com",
+                                "BLStartDate": "1477308028",
+                                "companyJoinDate": "1477308028",
+                                "companyLeaveDate": "1477308028",
+                                "leaveTaken": 0,
+                                "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                            },
+                            {
+                                "engineerID": "40003EI",
+                                "status": "Fellowship",
+                                "name": "Bhushan",
+                                "company": "BridgeLabz",
+                                "mobile": "9876000021",
+                                "emailAddress": "me.bhushan4u@gmail.com",
+                                "BLStartDate": "1477308028",
+                                "companyJoinDate": "1477308028",
+                                "companyLeaveDate": "1477308028",
+                                "leaveTaken": 0,
+                                "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                            }]
+                        }]
+                    }
+                },
+                "falloutEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "falloutNumber": {
+                                "required": true,
+                                "type": "integer",
+                                "example": 2
+                            },
+                            "totalEmployee": {
+                                "required": true,
+                                "type": "integer",
+                                "example": 36
+                            },
+                            "employeeList": [{
+                                "engineerID": "40002EI",
+                                "status": "Fellowship",
+                                "name": "Shwetali",
+                                "company": "BridgeLabz",
+                                "mobile": "9876000022",
+                                "emailAddress": "khambeshwetali@ymail.com",
+                                "BLStartDate": "1477308028",
+                                "companyJoinDate": "1477308028",
+                                "companyLeaveDate": "1477308028",
+                                "leaveTaken": 0,
+                                "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                            },
+                            {
+                                "engineerID": "40003EI",
+                                "status": "Fellowship",
+                                "name": "Bhushan",
+                                "company": "BridgeLabz",
+                                "mobile": "9876000021",
+                                "emailAddress": "me.bhushan4u@gmail.com",
+                                "BLStartDate": "1477308028",
+                                "companyJoinDate": "1477308028",
+                                "companyLeaveDate": "1477308028",
+                                "leaveTaken": 0,
+                                "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                            }]
+                        }]
+                    }
+                },
+                "leaveOutEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "employeeLeave": {
+                                "required": true,
+                                "type": "integer",
+                                "example": 2
+                            },
+                            "totalEmployee": {
+                                "required": true,
+                                "type": "integer",
+                                "example": 36
+                            },
+                            "employeeList": [{
+                                "engineerID": "40002EI",
+                                "status": "Fellowship",
+                                "name": "Shwetali",
+                                "company": "BridgeLabz",
+                                "mobile": "9876000022",
+                                "emailAddress": "khambeshwetali@ymail.com",
+                                "BLStartDate": "1477308028",
+                                "companyJoinDate": "1477308028",
+                                "companyLeaveDate": "1477308028",
+                                "leaveTaken": 0,
+                                "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                            },
+                            {
+                                "engineerID": "40003EI",
+                                "status": "Fellowship",
+                                "name": "Bhushan",
+                                "company": "BridgeLabz",
+                                "mobile": "9876000021",
+                                "emailAddress": "me.bhushan4u@gmail.com",
+                                "BLStartDate": "1477308028",
+                                "companyJoinDate": "1477308028",
+                                "companyLeaveDate": "1477308028",
+                                "leaveTaken": 0,
+                                "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                            }]
+                        }]
+                    }
+                }
+            }
+        },
+        "employeeAttendanceSnapshotFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to retrive the employee attendance snapshot"
+                }
+            }
+        },
+        "attendanceSummaryByDateRangeSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the attendance summary for the selected date range"
+                },
+                "attendance": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "date": "02/03/2017",
+                            "unmarked": "-"
+                        },
+                        {
+                            "date": "02/03/2017",
+                            "unmarked": "5"
+                        }]
+                    }
+                },
+                "totalEmployee": {
+                    "required": true,
+                    "type": "integer",
+                    "example": 36
+                }
+            }
+        },
+        "attendanceSummaryByDateRangeFailure": {
+            "properties": {
+                "properties": {
+                    "status": {
+                        "required": true,
+                        "type": "Interger",
+                        "example": false
+                    },
+                    "message": {
+                        "required": true,
+                        "type": "String",
+                        "example": "Failed to retrived the attendance summary for the selected date range"
+                    }
+                }
+            }
+        },
+        "emailNofityEmployeeSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully in sent notification to the employee for the unmak date"
+                }
+            }
+        },
+        "emailNofityEmployeeFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": [
+                        "Failed to send notification to the employee for the unmak date",
+                        "Notification Type cannot be blank, please enter the notification type",
+                        "Invalid Notification Type, the notification type is not valid",
+                        "Invalid Date, please enter a valid date format (dd/mm/yyyy)"
+                    ]
+                }
+            }
+        },
+        "emailNotifyAbsenceSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully sent notification to the employee for the absent dates"
+                }
+            }
+        },
+        "emailNotifyAbsenceFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to send notification to the employee for the absent dates"
+                }
+            }
+        },
+        "SETFESchema": {
+            "properties": {
+                "timeStamp": {
+                    "type": "integer",
+                    "required": true,
+                    "example": 1483401600000
+                }
+            }
+        },
+        "searchEmployeeListSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the employee list"
+                },
+                "employeeList": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Bhushan",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000021",
+                            "emailAddress": "me.bhushan4u@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40003EI"
+                        }]
+                    }
+                }
+            }
+        },
+        "searchEmployeeListFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to get the employee list for the searched employee name"
+                }
+            }
+        },
+        "searchEmployeeSocketSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully returned the search result."
+                },
+                "employeeResultByNameEmail": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI"
+                        }]
+                    }
+                },
+                "employeeResultByCity": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "city": "Mumbai"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "city": "Mumbai"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "city": "Mumbai"
+                        }]
+                    }
+                },
+                "employeeResultByCompany": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "company": "Meru"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "company": "Meru"
+                        },
+                        {
+                            "name": "Amit Sharma",
+                            "company": "BridgeLabz",
+                            "emailAddress": "xyz@gmail.com",
+                            "engineerID": "40001EI",
+                            "company": "Meru"
+                        }]
+                    }
+                }
+            }
+        },
+        "searchEmployeeSocketFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to get the search result"
+                }
+            }
+        },
+        "searchEmployeeListByNameSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the employee list for the searched employee name"
+                },
+                "employeeList": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40001EI"
+                        },
+                        {
+                            "name": "Bhushan",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000021",
+                            "emailAddress": "me.bhushan4u@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg",
+                            "engineerID": "40003EI"
+                        }]
+                    }
+                }
+            }
+        },
+        "searchEmployeeListByNameFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to get the employee list for the searched employee name"
+                }
+            }
+        },
+        "recordEmployeeDayAttendanceSchema": {
+            "properties": {
+                "attendanceDate": {
+                    "type": "string",
+                    "required": true,
+                    "example": "01/04/2017"
+                },
+                "engineerID": {
+                    "type": "string",
+                    "required": true,
+                    "example": "40001EI"
+                },
+                "status": {
+                    "type": "string",
+                    "required": true,
+                    "example": "Present"
+                },
+                "marked": {
+                    "type": "boolean",
+                    "required": true,
+                    "example": true
+                },
+                "inTime": {
+                    "type": "string",
+                    "required": true,
+                    "example": "8:30 AM"
+                },
+                "outTime": {
+                    "type": "string",
+                    "required": true,
+                    "example": "7:30 PM"
+                },
+                "reason": {
+                    "type": "string",
+                    "required": true,
+                    "example": "-"
+                }
+            }
+        },
+        "recordEmployeeDayAttendanceSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully created employee day attendance record"
+                },
+                "engineerID": {
+                    "required": true,
+                    "type": "string",
+                    "example": "40001EI"
+                },
+                "date": {
+                    "required": true,
+                    "type": "string",
+                    "example": "01/04/2017"
+                }
+            }
+        },
+        "recordEmployeeDayAttendanceFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to create employee day attendance record"
+                }
+            }
+        },
+        "employeeMonthAttendanceSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived the employee month records"
+                },
+                "attendanceData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "1": {
+                            "status": "Leave",
+                            "marked": "true",
+                            "intime": "-",
+                            "outtime": "-",
+                            "reason": "I don't care"
+                        },
+                        "29": {
+                            "status": "Leave",
+                            "marked": "true",
+                            "intime": "-",
+                            "outtime": "-",
+                            "reason": "My Wish"
+                        }
+                    }
+                },
+                "employeeData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "name": "Amit Sharma",
+                        "status": "Fellowship",
+                        "company": "BridgeLabz",
+                        "mobile": "9594368083",
+                        "emailAddress": "xyz@gmail.com",
+                        "BLStartDate": "1477308028",
+                        "companyJoinDate": "1477308028",
+                        "companyLeaveDate": "1477308028",
+                        "leaveTaken": 7,
+                        "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                    }
+                }
+            }
+        },
+        "employeeMonthAttendanceFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to retrived the employee month records"
+                }
+            }
+        },
+        "getEmployeeDetailsSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived employee HR Data"
+                },
+                "employeeData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "name": "Amit Sharma",
+                        "status": "Fellowship",
+                        "company": "BridgeLabz",
+                        "mobile": "9876000022",
+                        "emailAddress": "khambeshwetali@ymail.com",
+                        "BLStartDate": "1477308028",
+                        "companyJoinDate": "1477308028",
+                        "companyLeaveDate": "1477308028",
+                        "leaveTaken": 0,
+                        "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                    }
+                },
+                "hrData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "BLStartDate": "1477308028",
+                        "companyContractInitiated": "Yes",
+                        "companyContractSigned": "No",
+                        "company": "BridgeLabz",
+                        "companyJoinDate": "1477308028",
+                        "companyLeaveDate": "1477308028",
+                        "contractSignDate": "..",
+                        "employeeStatus": "Fellowship",
+                        "enggContractInitiated": "Yes",
+                        "enggContractSigned": "Yes",
+                        "fellowshipPeriod": "3 Months",
+                        "hiringCity": "Mumbai",
+                        "initiateTransfer": "Yes"
+                    }
+                },
+                "personalData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "annualSalary": "200000000000",
+                        "dateOfBirth": "20 Sep 1993",
+                        "emailId": "khambeshwetali@ymail.com",
+                        "employeeName": "Shwetali",
+                        "fatherMobile": "9768525131",
+                        "fatherName": "KK ganguli",
+                        "mobile": "9876000022",
+                        "mumbaiAddress": "Flat No.201,Raheja Complex , Andheri (W)",
+                        "occupation": "Engineer",
+                        "permenantAddress": "Flat No.201, Raheja Complex , Andheri (W)"
+                    }
+                },
+                "profileData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "aggregateIn": "00",
+                        "degree": "Btech",
+                        "diploma": "yes",
+                        "discipline": "CS",
+                        "finalYearPercentage": "76",
+                        "training": "NA",
+                        "trainingInstitute": "NA",
+                        "trainingPeriod": "6 months",
+                        "yearOfPassing": "2016"
+                    }
+                },
+                "trackingData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "bridgelabzStartDate": "2nd Jan 2017",
+                        "bridgelabzEndDate": "2nd April 2017",
+                        "currentWeek": "4 week",
+                        "weeksLeft": "19 week",
+                        "techStack": "Android",
+                        "week1": "7 week"
+                    }
+                },
+                "bankData": {
+                    "required": true,
+                    "type": "object",
+                    "example": {
+                        "accountNumber": "06001251551000",
+                        "bankName": "SBI",
+                        "ifscCode": "SBI002121",
+                        "pan": "APZT54551ds",
+                        "isSalaried": "Yes",
+                        "reason": "NA"
+                    }
+                }
+            }
+        },
+        "getEmployeeDetailsFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to retrived employee HR Data"
+                }
+            }
+        },
+        "employeeProfileDetailsFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to retrive Employee Profile Details"
+                }
+            }
+        },
+        "generateAllEmployeeSalaryReportInvoiceSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Successfully retrived All Employee Salary Report & Invoice"
+                },
+                "allEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                                "engineerID": 30001,
+                                "name": "Mrunal desai",
+                                "status": "Internship",
+                                "company": "BridgeLabz"
+                            },
+                            {
+                                "engineerID": 30002,
+                                "name": "Arati Patel",
+                                "status": "Fellowship",
+                                "company": "BridgeLabz"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "generateAllEmployeeSalaryReportInvoiceFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Failed to retrive All Employee Salary Report & Invoice"
+                }
+            }
+        },
+        "updateEmployeeDetailsSchema": {
+            "properties": {
+                "engineerID": {
+                    "type": "string",
+                    "required": true,
+                    "example": "40001EI"
+                },
+                "HRDetails": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                            {
+                            "hiringCity": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Mumbai"
+                            },
+                            "fellowshipPeriod": {
+                                "type": "string",
+                                "required": true,
+                                "example": "4 Months"
+                            },
+                            "bridgelabzStartDate": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 Sep 2016"
+                            },
+                            "companyJoinDate": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 jan 2017"
+                            },
+                            "companyLeaveDate": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 july 2017"
+                            },
+                            "enggContractInitiated": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 July 2017"
+                            },
+                            "enggContractSigned": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 Jan 2018"
+                            },
+                            "companyContractInitiated": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 Jan 2017"
+                            },
+                            "companyContractSigned": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 Dec 2016"
+                            },
+                            "contractSignDate": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 July 2017"
+                            },
+                            "initiateTransfer": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 July 2017"
+                            },
+                            "company": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Next Education"
+                            },
+                            "employeeStatus": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Fellowship"
+                            }
+                        }]
+                    }
+                },
+                "PersonalDetails": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                            {
+                            "name": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Amit Sharma"
+                            },
+                            "emailAddress": {
+                                "type": "string",
+                                "required": true,
+                                "example": "amit@gmail.com"
+                            },
+                            "mobile": {
+                                "type": "string",
+                                "required": true,
+                                "example": "9870123466"
+                            },
+                            "dob": {
+                                "type": "string",
+                                "required": true,
+                                "example": "14 feb 1992"
+                            },
+                            "relativeName": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Rama Singh"
+                            },
+                            "relation": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Father"
+                            },
+                            "relativeContact": {
+                                "type": "string",
+                                "required": true,
+                                "example": "9821462041"
+                            },
+                            "relativeOccupation": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Self Employeed"
+                            },
+                            "relativesAnnualSalary": {
+                                "type": "string",
+                                "required": true,
+                                "example": "4 Lac"
+                            },
+                            "address": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Plot no57,sector 12,vashi, Pin: 400703"
+                            },
+                            "permenantAddress": {
+                                "type": "string",
+                                "required": true,
+                                "example": "S/O Venkateshappa P.R, C/O Suryanarayana Rao B.P, #30/1 Hort Park Road, S.S Puram 15 th Cross,TUMKUR-572102"
+                            }
+                        }]
+                    }
+                },
+                "ProfileDetails": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                            {
+                            "diploma": {
+                                "type": "string",
+                                "required": true,
+                                "example": "No"
+                            },
+                            "degree": {
+                                "type": "string",
+                                "required": true,
+                                "example": "BE"
+                            },
+                            "discipline": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Electronics Engg."
+                            },
+                            "yearOfPassing": {
+                                "type": "string",
+                                "required": true,
+                                "example": "2014"
+                            },
+                            "aggregateIn": {
+                                "type": "integer",
+                                "required": true,
+                                "example": 58.04
+                            },
+                            "finalYearPercentage": {
+                                "type": "integer",
+                                "required": true,
+                                "example": 64.01
+                            },
+                            "trainingInstitute": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Vector, Hyderabad"
+                            },
+                            "trainingPeriod": {
+                                "type": "string",
+                                "required": true,
+                                "example": "6 Months"
+                            },
+                            "training": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Embedded System Programming"
+                            }
+                        }]
+                    }
+                },
+                "TrackingDetails": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                            {
+                            "techStack": {
+                                "type": "string",
+                                "required": true,
+                                "example": "MEAN Stack"
+                            },
+                            "bridgelabzStartDate": {
+                                "type": "string",
+                                "required": true,
+                                "example": "1 Oct 2016"
+                            },
+                            "bridgelabzEndDate": {
+                                "type": "string",
+                                "required": true,
+                                "example": "-"
+                            },
+                            "currentWeek": {
+                                "type": "string",
+                                "required": true,
+                                "example": "19 Weeks"
+                            },
+                            "WeeksLeft": {
+                                "type": "string",
+                                "required": true,
+                                "example": "7 Weeks"
+                            },
+                            "week1": {
+                                "type": "string",
+                                "required": true,
+                                "example": "7 Weeks"
+                            }
+                        }]
+                    }
+                },
+                "BankDetails": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [
+                            {
+                            "accountNumber": {
+                                "type": "string",
+                                "required": true,
+                                "example": "021680054560"
+                            },
+                            "bankName": {
+                                "type": "string",
+                                "required": true,
+                                "example": "HDFC Bank"
+                            },
+                            "ifscCode": {
+                                "type": "string",
+                                "required": true,
+                                "example": "HDFC5000I"
+                            },
+                            "pan": {
+                                "type": "string",
+                                "required": true,
+                                "example": "APQTN0212N"
+                            },
+                            "isSalaried": {
+                                "type": "string",
+                                "required": true,
+                                "example": "Yes"
+                            },
+                            "reason": {
+                                "type": "string",
+                                "required": true,
+                                "example": "-"
+                            }
+                        }]
+                    }
+                }
+            }
+        },
+        "updateEmployeeDetailsSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Successfully updated the Employee Details"
+                }
+            }
+        },
+        "updateEmployeeDetailsFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Failed to update the Employee HR Data"
+                }
+            }
+        },
+        "downloadEmployeeReportSchema": {
+            "properties": {
+                "selectedEngineer": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": ["427188EI", "427189EI", "427201EI"]
+                    }
+                },
+                "clients": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                                "name": "Next Education",
+                                "engineerList": ["40001EI", "40002EI", "40003EI"]
+                            },
+                            {
+                                "name": "Craft Villa",
+                                "engineerList": ["40011EI", "40022EI", "400033EI"]
+                            }
+                        ]
+                    }
+                },
+                "selectedCompany": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                                "name": "Next Education",
+                                "engineerList": ["40001EI", "40002EI", "40003EI"]
+                            },
+                            {
+                                "name": "Craft Villa",
+                                "engineerList": ["40011EI", "40022EI", "400033EI"]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "attendanceOfInternshipAtClientSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Successfully retrived the Attendance of Internship Employee at client side"
+                },
+                "allEmployee": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                            "company": "MERU",
+                            "employeeList": {
+                                "required": true,
+                                "schema": {
+                                    "type": "array",
+                                    "example": [{
+                                            "name": "AratiPatel",
+                                            "leaves": 0
+                                        },
+                                        {
+                                            "name": "Arjun Thakur",
+                                            "leaves": 1
+                                        }
+                                    ]
+
+                                }
+                            }
+                        },
+                        {
+                            "company": "NEXT-EDUCATION",
+                            "employeeList": {
+                                "required": true,
+                                "schema": {
+                                    "type": "array",
+                                    "example": [{
+                                            "name": "Sohail Khan",
+                                            "leaves": 0
+                                        },
+                                        {
+                                            "name": "Arbaz Khan",
+                                            "leaves": 1
+                                        }
+                                    ]
+
+                                }
+                            }
+                        }]
+                    }
+                }
+            }
+        },
+        "attendanceOfInternshipAtClientFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Failed to retrive the Attendance of Internship Employee at client side"
+                }
+            }
+        },
+        "clientWorkingDaysInWeekSuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Successfully retrived the client working days"
+                },
+                "weekdays":{
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": {
+                            "monday": true,
+                            "tuesday": true,
+                            "wednesday": true,
+                            "thursday": true,
+                            "friday": true,
+                            "saturday": false,
+                            "sunday": false
+                        }
+                    }
+                }
+            }
+        },
+        "clientWorkingDaysInWeekFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Failed to retrive the client working days"
+                }
+            }
+        },
+        "generateReportSuccess": {},
+        "generateReportFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "boolean",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "string",
+                    "example": "Failed to get the report"
+                }
+            }
+        },
+        "searchEmployeeByKeySuccess": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": true
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Searched result returned Successfully"
+                },
+                "employeeList": {
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "example": [{
+                            "engineerID": "40001EI",
+                            "name": "Amit Sharma",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9594368083",
+                            "emailAddress": "xyz@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 7,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                        },
+                        {
+                            "engineerID": "40003EI",
+                            "name": "Bhushan",
+                            "status": "Fellowship",
+                            "company": "BridgeLabz",
+                            "mobile": "9876000021",
+                            "emailAddress": "me.bhushan4u@gmail.com",
+                            "BLStartDate": "1477308028",
+                            "companyJoinDate": "1477308028",
+                            "companyLeaveDate": "1477308028",
+                            "leaveTaken": 0,
+                            "imageUrl": "http://192.168.1.102:3000/image2.jpg"
+                        }]
+                    }
+                }
+            }
+        },
+        "searchEmployeeByKeyFailure": {
+            "properties": {
+                "status": {
+                    "required": true,
+                    "type": "Interger",
+                    "example": false
+                },
+                "message": {
+                    "required": true,
+                    "type": "String",
+                    "example": "Searched result failed"
+                }
+            }
+        }
+    }
+}

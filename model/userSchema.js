@@ -10,11 +10,43 @@
  */
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
+    autoIncrement = require('mongoose-auto-increment'),
     bcrypt = require('bcryptjs'),
+    crypto = require('crypto'),
+    jwt = require('jwt-simple'),
     passportLocalMongoose = require('passport-local-mongoose'),
-    Base = require('./base'); // Include the base schema
-
+    Base = require('./base'), // Include the base schema
+    tokenSecret = 'put-a-$Ecr3t-h3re',
+    config;
 var ObjectId = Schema.Types.ObjectId;
+
+/**
+ * @schema  Token
+ * @description User token
+ */
+var Token = new Schema({
+    token: {
+        type: String
+    },
+    date_created: {
+        type: Date,
+        default: Date.now
+    },
+});
+
+/**
+ * Check the token expired
+ */
+Token.statics.hasExpired = function (created) {
+    var now = new Date();
+    var diff = (now.getTime() - created);
+    return diff > config.ttl;
+};
+
+/**
+ * Token Model
+ */
+var TokenModel = mongoose.model('Token', Token);
 
 /**
  * @description Defining ENUMs for the gender field which will use for validation.
@@ -32,20 +64,15 @@ var roles = 'ADMINISTRATOR,HUMAN RESOURCE,BUSINESS,FINANCE,MENTOR,REVIEWER'.spli
 var engineerTypes = 'FELLOWSHIP,INTERNSHIP,EMPLOYEMENT'.split(',');
 
 /**
- * @description Validations
- */
-var minlength = [3, 'The value of path `{PATH}` (`{VALUE}`) is shorter than the minimum allowed length ({MINLENGTH}).'];
-
-/**
  * @schema  UserSchema
  * @description User details
  */
 var UserSchema = new Base.BaseSchema({
     engineerID: {
         type: String,
-        required: true,
-        trim: true,
-        unique: ['A user with same Engineer ID {VALUE} already exists']
+        required: false,
+        trim: true
+        // unique: ['A user with same Engineer ID {VALUE} already exists']
     },
     firstName: {
         type: String,
@@ -60,7 +87,7 @@ var UserSchema = new Base.BaseSchema({
         trim: true,
         lowercase: true,
         unique: ['A user with same Email Address {VALUE} already exists'],
-        required: 'Email address is required',
+        required: 'Email address is required'
         //validate: [validate.email, 'invalid email address']
     },
     engineerType: {
@@ -73,7 +100,11 @@ var UserSchema = new Base.BaseSchema({
     },
     gender: {
         type: String,
-        enum: genders
+        required: false,
+        enum: {
+            values: genders,
+            message: 'Invalid Gender. Please selecet a valid Gender.'
+        }
     },
     isSuperAdmin: {
         type: Boolean,
@@ -98,6 +129,54 @@ var UserSchema = new Base.BaseSchema({
 });
 
 UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(autoIncrement.plugin, { model: 'User', field: 'engineerID' ,startAt: 100,incrementBy: 1});
+
+/**
+ * JWT `Encode` the password
+ *
+ * @return {String} token
+ * @api public
+ */
+UserSchema.statics.encode = function (data) {
+    return jwt.encode(data, tokenSecret);
+};
+
+/**
+ * JWT `Decode` the password
+ *
+ * @return {String} token
+ * @api public
+ */
+UserSchema.statics.decode = function (data) {
+    return jwt.decode(data, tokenSecret);
+};
+
+UserSchema.statics.createUserToken = function (username, cb) {
+    var self = this;
+    this.findOne({
+        username: username
+    }, function (error, user) {
+        if (error || !user) {
+            console.log('error');
+        }
+        //Create a token and add to user and save
+        var token = self.encode({
+            username: username
+        });
+        user.token = new TokenModel({
+            token: token
+        });
+        user.save(function (err, user) {
+            if (err) {
+                cb(err, null);
+            } else {
+                console.log("about to cb withuserusr.token.token: " + user.token.token);
+                cb(false, user.token.token); //token object, in turn, has a token property :)
+            }
+        });
+    });
+};
+
 UserSchema.plugin(require('mongoose-beautiful-unique-validation'));
 var UserModel = Base.BaseModel.discriminator('User', UserSchema);
 

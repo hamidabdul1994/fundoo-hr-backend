@@ -9,7 +9,7 @@
  * Module dependencies
  */
 var mongoose = require('mongoose'),
-	User = require('./userSchema'),
+    User = require('./userSchema').User,
 	Base = require('./base'); // Include the base schema
 
 var ObjectId = mongoose.Schema.Types.ObjectId;
@@ -71,6 +71,14 @@ var UserHRDetailsSchema = new Base.BaseSchema({
 	}
 });
 
+// UserHRDetailsSchema.options.toJSON = {
+//     transform: function(doc, ret, options) {
+//         ret.id = ret._id;
+//         delete ret._id;
+//         delete ret.__v;
+//         return ret;
+//     }
+// };
 /**
  * Expose `UserHRDetails` Model
  */

@@ -6,7 +6,7 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    User = require('./userSchema'),
+    User = require('./userSchema').User,
     Base = require('./base'); // Include the base schema
 
 var ObjectId = mongoose.Schema.Types.ObjectId;

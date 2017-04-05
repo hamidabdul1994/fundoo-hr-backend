@@ -32,6 +32,7 @@
     "minimist": "*",
     "mongodb": "^2.2.24",
     "mongoose": "^4.9.1",
+    "mongoose-auto-increment": "^5.0.1",
     "mongoose-beautiful-unique-validation": "^5.1.1",
     "mongoose-schema-jsonschema": "^1.1.10",
     "mongoose-unique-validator": "^1.0.4",
@@ -46,6 +47,8 @@
     "redis": "^2.6.5",
     "stylus": "*",
     "swagger-node-express": "~2.0",
+    "swagger-tools": "^0.10.1",
+    "swagger-ui-middleware": "^1.0.0",
     "winston": "^2.3.1"
   },
   "devDependencies": {},

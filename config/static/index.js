@@ -148,7 +148,9 @@ var checkSystemErrors = function(err) {
  */
 var enumData = {
     "employeeArea": ["hr", "personal", "profile", "bank", "track"],
-    "notificationType": ["unmarked", "fallout", "leave"]
+    "notificationType": ["unmarked", "fallout", "leave"],
+    "schemaNames":{"hr":"UserHRDetails", "personal":"UserProfile", "profile":"UserPersonal",
+    "bank":"UserBank", "track":"UserTracking"}
 };
 
 module.exports = {

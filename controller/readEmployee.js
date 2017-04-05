@@ -3,12 +3,15 @@ var router = Express.Router();
 var commonMethod = require("../common/commonMethod");
 var deriveDataEvent = require("../common/events");
 var config = require('../config/static');
+var models = require("../model");
 
 router.get("/:requiredData", function(request, response) {
-    var result = {},
+    var result1 = {},
         errors;
     try {
-        result = config.defaultResult; //Setting Default Result as false
+      result1 = undefined;
+        result1 = config.defaultResult; //Setting Default Result as false
+        console.log(JSON.stringify(config.defaultResult));
         var employeeArea = request.params.requiredData;
         if (config.enumData.employeeArea.indexOf(employeeArea) === -1) {
             throw "Bad Parameter Conntact to administrator"; //Generating Error While not Finding param in array
@@ -21,28 +24,47 @@ router.get("/:requiredData", function(request, response) {
                         errors = request.validationErrors(); // isValid = isValid.useFirstErrorOnly();
                         throw errors[0].msg;
                     }
-                    result.status = true;
-                    result.message = "Successfully Generated";
-                    result[employeeArea] = {
-                        "data": "data"
-                    };
-                    var updateData = request.body;
-                    response.send(result);
+                    result1.status = true;
+                    result1.message = "Successfully Generated";
+                    var schemaName = config.enumData.schemaNames[employeeArea];
+                    models[schemaName].find(function(err, employeeDataArry) {
+                        // employeeDataArry = employeeDataArry.map(function (employeeData) {
+                        //   return employeeData.toJSON();
+                        // });
+                        result1[employeeArea + "Data"] = employeeDataArry;
+                        response.send(result1);
+                    return;
+                    });
                 } catch (e) {
                     if (!config.checkSystemErrors(e)) {
-                        result.message = e;
+                        result1.message = e;
                     }
-                    response.status(401).json(result);
+                    response.send(result1);
+                    return;
                 }
             });
         }
     } catch (e) {
         if (!config.checkSystemErrors(e)) {
-            result.message = e;
+            result1.status = false;
+            result1.message = e;
         }
-        console.log(JSON.stringify(result));
-        response.status(401).json(result);
+        response.status(401).json(result1);
+        return;
+    }finally{
+      response.on("finish",function () {
+        for (var i in result1) {
+          if(i!=="status" || i!=="message")
+          delete result1[i]; //Deleting Rest of Garbage data
+        }
+      //   result1 = {};
+      //
+      // result1 = undefined;
+      // employeeArea = undefined;
+        console.log("finish");
+      });
     }
+
 });
 
 module.exports = router;

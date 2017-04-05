@@ -1,15 +1,16 @@
 'use-strict';
 
 var mongoose = require('mongoose'),
-  dbURI = 'mongodb://localhost/fundoohr';
+  autoIncrement = require('mongoose-auto-increment'),
+  dbURI = 'mongodb://localhost/fundoohr1';
 
 mongoose.Promise = global.Promise; // Fix for error : Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
 
 // mongoose.connect('127.0.0.1','test');
-mongoose.connect(dbURI, function (err) {
+var connection =mongoose.connect(dbURI, function (err) {
   if (err) console.log(err);
 });
-
+autoIncrement.initialize(connection);     //initialize the plugin auto increament
 mongoose.connection.on("connected", function () {
   console.log("Mongoose connected to: " + dbURI);
 });
